@@ -1,6 +1,8 @@
-import { useState } from "react";
+import { useState,useContext } from "react";
+import contextApi from "./../../context/contextApi"
 import { planets } from "./../data.js"
 const Search = () => {
+    const {setFilteredPlants} = useContext (contextApi)
     const [content, setContent] = useState("");
     const [newArr , setnewArr] = useState([])
     const target = (query) => {
