@@ -30,7 +30,7 @@ export let planets = [
         Harms: ""
      },
      {
-        name: "",
+        name: "صمغ ایرانی",
         Instructions:"",
         benefits: "",
         Harms: ""
