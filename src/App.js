@@ -3,7 +3,9 @@ import contextApi from "./context/contextApi"
 import { useState } from "react"
 import {
     Main,
-    Navbar
+    Navbar,
+    ContactUs,
+    Blog
 } from "./components/components"
 const App = () => {
     const [loading , setLoading] = useState(false)
@@ -19,6 +21,8 @@ const App = () => {
                 <Navbar/>
                 <Routes>
                     <Route path="/" element={<Main/>} />
+                    <Route path="/contact" element ={ <ContactUs/> }/>
+                    <Route path="/blog" element={<Blog/>} />
                 </Routes>
             </div>
             </contextApi.Provider>
