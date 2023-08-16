@@ -1,0 +1,26 @@
+body{
+    background-color: ghostwhite;
+}
+button {
+
+    border: 1px solid rgba(104, 85, 224, 1);
+    border-radius: 500px !important; ;
+    margin: auto;
+    width: 110px;
+    box-shadow: 0 0 5px rgba(104, 85, 224, 0.2);
+    transition: 0.4s;
+}
+
+.buttonStyle:hover{
+    color: white;
+    height: 5px;
+    width:120px;
+    box-shadow: 0 0 20px rgba(104, 85, 224, 0.6);
+    background-color: rgba(104, 85, 224, 1);
+    transition: 0.4s;
+
+}
+header{
+background-color: white;
+    box-shadow: 2px 2px 5px gray;
+}
