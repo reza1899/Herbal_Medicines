@@ -2,5 +2,8 @@ body {
   font-family: "Vazir" , "tahoma" ,"Ubuntu" !important;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+    margin: 0px;
+    padding: 0px;
+    background-color:ghostwhite;
 }
 

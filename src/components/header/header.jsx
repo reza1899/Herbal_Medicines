@@ -3,34 +3,29 @@ import { useNavigate } from "react-router-dom"
 import "./header.css"
 const Navbar = () => {
     const navigate = useNavigate()
-       return (
+    return (
         <>
-            <div>
-                <header className="">
-                    <div className="container p-4">
-                        <div className="row m-0 d-flex justify-content-between position-relative">
-                            <div className="col-9 p-0">
-                                        <button  className="buttonStyle btn fw-bold position-absolute" onClick={() => navigate("/")}>
-                                            خانه
-                                        </button>
-                                        <button className="buttonStyle btn fw-bold position-absolute" onClick={() => navigate("/contact")}>
-                                            تماس با ما
-                                        </button>
-                                        <button className="buttonStyle btn fw-bold position-absolute" onClick={() => navigate("/blog")}>
-                                            بلاگ
-                                        </button>
-                                        <button className="buttonStyle btn fw-bold position-absolute" onClick={() => navigate("/blog")}>
-                                            بلاگ
-                                        </button>
-                            </div>
-                            <div className="col-3 p-0">
+            <header>
+                <nav className="">
+                    <div className="x1">
+                        <div className="logo">
+                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRH6FrEVpGlltmCUHnuimao6-vEUKmSH4pIlg&usqp=CAU" alt="" />
+                        </div>
+                        <ul className="d-flex align-items-center justify-content-center">
+                            <li><button className="btn" onClick={() => { navigate("/") }}>Home</button></li>
+                            <li><button className="btn" onClick={() => { navigate("/contact") }}>Contact</button></li>
+                            <li><button className="btn" onClick={() => { navigate("/blog") }}>Blog</button></li>
+                        </ul>
 
-                            </div>
+                        <div className="auth">
+                            <ul className="d-flex align-items-center justify-content-center">
+                                <li><button className="btn" onClick={() => { navigate("/login") }}>Login</button></li>
+                                <li><button className="btn" onClick={() => { navigate("/register") }}>Register</button></li>
+                            </ul>
                         </div>
                     </div>
-                </header>
-                {/* <Search/> */}
-            </div>
+                </nav>
+            </header>
         </>
     )
 }
