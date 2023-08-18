@@ -7,18 +7,23 @@ const Navbar = () => {
         <>
             <header>
                 <nav className="">
-                    <div className="x1">
+                    <div className="container_nav">
+                    <div className="menu_icon">
+                          <button className="btn">
+                          <i className="fa fa-bars fs-5 m-2"></i>
+                          </button>
+                        </div>
                         <div className="logo">
                             <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRH6FrEVpGlltmCUHnuimao6-vEUKmSH4pIlg&usqp=CAU" alt="" />
                         </div>
-                        <ul className="d-flex align-items-center justify-content-center">
+                        <ul className="">
                             <li><button className="btn" onClick={() => { navigate("/") }}>Home</button></li>
                             <li><button className="btn" onClick={() => { navigate("/contact") }}>Contact</button></li>
                             <li><button className="btn" onClick={() => { navigate("/blog") }}>Blog</button></li>
                         </ul>
 
                         <div className="auth">
-                            <ul className="d-flex align-items-center justify-content-center">
+                            <ul className="">
                                 <li><button className="btn" onClick={() => { navigate("/login") }}>Login</button></li>
                                 <li><button className="btn" onClick={() => { navigate("/register") }}>Register</button></li>
                             </ul>
