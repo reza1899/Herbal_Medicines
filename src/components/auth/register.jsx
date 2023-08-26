@@ -30,7 +30,7 @@ const Register = () => {
 
     return (
         <div className="auth_main">
-            <div className="auth_left_sec">
+            <div className="auth_left_sec top-0">
                 <form onSubmit={handleSubmit}>
                     <div className="auth_form-group">
                         <label>نام:</label>
