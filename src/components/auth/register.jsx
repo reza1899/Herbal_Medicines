@@ -64,7 +64,7 @@ const Register = () => {
 
                 </form>
                 <p onClick={() => navigate("/login")}>
-                    هنوز ثبت نام نکرده اید؟
+                    وارد حساب کاربری شوید
                 </p>
             </div>
             <div className="right_sec">
