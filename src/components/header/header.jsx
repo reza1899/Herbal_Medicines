@@ -2,6 +2,7 @@
 import { useNavigate } from "react-router-dom"
 import { useEffect, useRef, useState } from "react"
 import "./header.css"
+import Search from "./searchBox"
 const Navbar = () => {
     const navigate = useNavigate()
     const [show, setShow] = useState(-380)
@@ -21,7 +22,27 @@ const Navbar = () => {
     return (
         <>
             <header>
-                <nav className="">
+                <div className="container_m">
+                    <div className="container">
+                        <div className="menu_icon">
+                            <button className="menu_button" onClick={() => { setShow(prevMargin => prevMargin === 0 ? -380 : 0) }}>
+                                <i className="fa fa-bars fs-5 m-2"></i>
+                            </button>
+                        </div>
+                        <div className="main_header">
+                            <img className="logo" src="https://img.freepik.com/premium-photo/hand-draw-shampoo-bottel-vector-design_862994-17792.jpg?size=626&ext=jpg&ga=GA1.2.1004515625.1688841236&semt=ais" alt="" />
+                            <div className="left ">
+                                <div className="">
+                                    <a className="a_header" href="https://www.instagram.com"><i className="fab fa-instagram fs-1 m-2 text-dark"></i></a>
+                                    <a className="a_header" href="https://www.facebook.com"><i className="fab fa-facebook fs-1 m-2 text-dark"></i></a>
+                                    <a className="a_header" href="https://www.telegram.com"><i className="fab fa-telegram fs-1 m-2 text-dark"></i> </a>
+                                </div>
+                                <Search />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                {/* <nav className="">
                     <div className="container_nav">
                         <div className="menu_icon">
                         <button className="menu_button" onClick={() => { setShow(prevMargin => prevMargin===0 ? -380 : 0) }}>
@@ -44,9 +65,11 @@ const Navbar = () => {
                             </ul>
                         </div>
                     </div>
-                </nav>
-                <div className="responsive_nav" ref={menuRef} style={{ marginRight:show + "px" }}  onClick={e => e.stopPropagation()}>
+                </nav> */}
+                {/* responsive nav */}
+                <div className="responsive_nav" ref={menuRef} style={{ marginRight: show + "px" }} onClick={e => e.stopPropagation()}>
                     <ul className="">
+                    <li className="menu_item">  <Search /></li>
                         <li className="menu_item"><p className="p-3" onClick={() => { navigate("/") }}>خانه</p></li>
                         <hr />
                         <li className="menu_item"><p className="p-3" onClick={() => { navigate("/contact") }}>تماس با ما</p></li>
@@ -58,6 +81,7 @@ const Navbar = () => {
                         <li className="menu_item"><p className="p-3" onClick={() => { navigate("/register") }}>ثبت نام</p></li>
                     </ul>
                 </div>
+                {/* end of responsive nav */}
             </header>
         </>
     )

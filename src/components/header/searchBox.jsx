@@ -1,32 +1,40 @@
 import { useState } from "react";
-import { planets } from "./../data.js"
+import { planets } from "./../../service/data"
+import "./header.css"
+
 const Search = () => {
     const [content, setContent] = useState("");
+
     const target = (query) => {
         setContent(query)
-            }
+    }
 
     return (
         <>
-            <div className="text-center mt-5">
-                <input className="w-50" type="search" value={content} onChange={e => { target(e.target.value) }} />
+            <div className="search-box text-center ">
+            <i className="fas fa-search search-icon text-muted"></i> {/* Add FontAwesome search icon */}
+                <input
+                    className="search"
+                    placeholder="جستجو کنید"
+                    type="search"
+                    value={content}
+                    onChange={e => { target(e.target.value) }}
+                />
                 <br />
                 <div>
-                    {
-                       content ? (
-                        planets.filter( (item) => {
-                            return item.name.toLocaleLowerCase().includes(content)
-                        } ).map( (item) => (
-                            <div>
+                    {content ? (
+                        planets.filter((item) => {
+                            return item.name.toLowerCase().includes(content)
+                        }).map((item) => (
+                            <div key={item.id}>
                                 {item.name}
                             </div>
-                        ) )
-                       ) : null
-                       
-                    }
+                        ))
+                    ) : null}
                 </div>
             </div>
         </>
     )
 }
+
 export default Search
