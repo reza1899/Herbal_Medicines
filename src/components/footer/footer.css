@@ -27,3 +27,13 @@
     transition: all 0.3s ease-in-out;
     transform:  scale(1.2);
   }
+.app-wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; /* Ensure the container takes up at least the full viewport height */
+}
+
+/* Your other styles here */
+
+/* Style for the footer */
+

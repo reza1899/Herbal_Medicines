@@ -63,6 +63,7 @@ hr {
     border-radius: 50%;
 }
 .container_m {
+    border-bottom: 1px solid black;
     width: 100%;
     background-color: ghostwhite;
     height: 80px;

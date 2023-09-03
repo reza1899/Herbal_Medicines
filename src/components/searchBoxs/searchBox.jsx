@@ -1,19 +1,20 @@
-import React, { useState,useEffect } from "react";
-import { planets } from "../../service/data";
+import React, { useContext} from "react";
+import {plants} from "../../service/data";
 import "./search.css";
+import contextApi from "./../../context/contextApi";
 
 const Search = () => {
-    const [content, setContent] = useState("");
-    const [planet, setPlanet] = useState([]);
-    useEffect(() => {
-        console.log(content)
-        setPlanet(() => {
-            return planets.filter((item) => {
-                return item.name.includes(content)
-            })
-        })
+    const {setFilteredPlants ,setSearchValue ,searchValue} = useContext(contextApi);
+    let FilteredTimeout;
+    const searching = () => {
+        clearTimeout(FilteredTimeout)
+        FilteredTimeout = setTimeout(() => {
+            setFilteredPlants(plants.filter((plant) => {
+                return plant.name.toLowerCase().includes(searchValue)
+            }))
+        }, 1000)
 
-    },[content])
+    }
     return (
         <>
             <div className="search-box text-center">
@@ -22,22 +23,10 @@ const Search = () => {
                     className="search"
                     placeholder="جستجو کنید"
                     type="text"
-                    value={content}
-                    onChange={(e) => setContent(e.target.value)}
+                    onChange={event => searching(setSearchValue(event.target.value))}
 
                 />
-                <br />
-                <div>
-                    <ul>
-                        {
-                            content ? planet.map((item, index) => {
-                                return <li key={index}>{item.name}</li>
-
-                            })
-                            : null
-                        }
-                    </ul>
-                </div>
+                <br/>
             </div>
         </>
     );

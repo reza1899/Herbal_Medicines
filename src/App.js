@@ -1,6 +1,7 @@
 import { Routes, Route, useLocation } from "react-router-dom";
 import contextApi from "./context/contextApi";
 import { useState } from "react";
+import "./../src/components/footer/footer.css";
 import {
     Main,
     Navbar,
@@ -12,6 +13,7 @@ import {
 } from "./service/components";
 
 const App = () => {
+    const [searchValue, setSearchValue] = useState("");
     const [loading, setLoading] = useState(false);
     const [filteredPlants, setFilteredPlants] = useState([]);
     const [isLogin, setIsLogin] = useState();
@@ -24,6 +26,8 @@ const App = () => {
 
     return (
         <contextApi.Provider value={{
+            searchValue,
+            setSearchValue,
             loading,
             setLoading,
             filteredPlants,
@@ -33,14 +37,18 @@ const App = () => {
         }}>
             <div className="App">
                 {showNavbarAndFooter && <Navbar />}
-                <Routes>
-                    <Route path="/" element={<Main />} />
-                    <Route path="/contact" element={<ContactUs />} />
-                    <Route path="/blog" element={<Blog />} />
-                    <Route path="/login" element={<Login />} />
-                    <Route path="/register" element={<Register />} />
-                </Routes>
-                {showNavbarAndFooter && <Footer />}
+                <div className="app-wrapper">
+                    <Routes>
+                        <Route path="/" element={<Main/>} />
+                        <Route path="/contact" element={<ContactUs />} />
+                        <Route path="/blog" element={<Blog />} />
+                        <Route path="/login" element={<Login />} />
+                        <Route path="/register" element={<Register />} />
+                    </Routes>
+                </div>
+                <div className="footer">
+                    {showNavbarAndFooter && <Footer />}
+                </div>
             </div>
         </contextApi.Provider>
     );
