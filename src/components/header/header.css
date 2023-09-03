@@ -20,44 +20,6 @@ li {
 
 
 /* Styles for the search box */
-.search-box {
-    position: relative;
-    /* Set the parent container to relative positioning */
-    width: 300px;
-    margin-right: 20px;
-}
-
-.search {
-    position: absolute;
-    left: 1px;
-    width: 100%;
-    padding: 10px 40px 10px 10px;
-    /* Add padding to the right to make space for the icon */
-    border: 1px solid #000000;
-    border-radius: 5px;
-    font-size: 20px;
-}
-
-.search::placeholder {
-    font-weight: lighter;
-    font-size: 20px;
-    padding: 5px;
-}
-
-/* Styles for the search icon */
-.search-icon {
-    z-index: 1;
-    position: relative;
-    /* Set the search icon to absolute positioning */
-    top: 47%;
-    /* Vertically center the icon within the input field */
-    right: 125px;
-    /* Adjust the right position to control the spacing */
-    transform: translateY(-50%);
-    /* Vertically center the icon */
-    font-size: 24px;
-    /* Adjust the icon size as needed */
-}
 
 
 hr {
@@ -100,14 +62,6 @@ hr {
     height: 80px;
     border-radius: 50%;
 }
-.a_header{
-    color: red !important;
-}
-a.a_header i:hover{
-    color: rgb(17, 184, 22) !important;
-    transform: scale(1.2);
-    transition: all 0.3s ease-in-out;}
-
 .container_m {
     width: 100%;
     background-color: ghostwhite;
@@ -200,7 +154,14 @@ a.a_header i:hover{
     border: none;
     cursor: pointer;
 }
+.item_one{
+    cursor: pointer;
+}
+.item_one:hover{
+    color:white;
+    transition: all 0.1s ease-in-out;
 
+}
 .menu_item:hover {
     /* From https://css.glass */
     background: rgba(255, 255, 255, 0.7);

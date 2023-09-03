@@ -2,7 +2,8 @@
 import { useNavigate } from "react-router-dom"
 import { useEffect, useRef, useState } from "react"
 import "./header.css"
-import Search from "./searchBox"
+import MenuSearchBox from "./../searchBoxs/menu_search_Box"
+import Search from "../searchBoxs/searchBox"
 const Navbar = () => {
     const navigate = useNavigate()
     const [show, setShow] = useState(-380)
@@ -69,7 +70,10 @@ const Navbar = () => {
                 {/* responsive nav */}
                 <div className="responsive_nav" ref={menuRef} style={{ marginRight: show + "px" }} onClick={e => e.stopPropagation()}>
                     <ul className="">
-                    <li className="menu_item">  <Search /></li>
+                        <li className="d-flex justify-content-end "><p className="p-3 item_one" onClick={() => { setShow(-380) }} >بستن<i className="fa fa-times fs-5 m-3"></i></p></li>
+                        <hr />
+                        <li className="menu_item"><MenuSearchBox /></li>
+                        <hr />
                         <li className="menu_item"><p className="p-3" onClick={() => { navigate("/") }}>خانه</p></li>
                         <hr />
                         <li className="menu_item"><p className="p-3" onClick={() => { navigate("/contact") }}>تماس با ما</p></li>
