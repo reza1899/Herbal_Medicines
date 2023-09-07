@@ -4,12 +4,13 @@ import { useState } from "react";
 import "./../src/components/footer/footer.css";
 import {
     Main,
-    Navbar,
+    Header,
     ContactUs,
     Blog,
     Login,
     Register,
     Footer,
+    Navbar,
 } from "./service/components";
 
 const App = () => {
@@ -36,7 +37,9 @@ const App = () => {
             setIsLogin
         }}>
             <div className="App">
+                {showNavbarAndFooter && <Header />}
                 {showNavbarAndFooter && <Navbar />}
+
                 <div className="app-wrapper">
                     <Routes>
                         <Route path="/" element={<Main/>} />

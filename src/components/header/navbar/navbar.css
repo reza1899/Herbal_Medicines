@@ -1,0 +1,22 @@
+nav {
+    display: flex;
+    justify-content: center; /* Align horizontally in the middle */
+    align-items: center;
+    padding: 10px 20px;
+    background-color: rgba(17, 184, 22);
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    box-shadow: 0 0 5px rgba(104, 85, 224, 0.2);
+    width: 90%;
+    height: 40px;
+    margin: 0 5% 0 5%; /* 10% spacing from left and right */
+    transition: 0.8s;
+
+}
+
+nav:hover {
+    width: 100%; /* Increase width to 100% on hover */
+    margin: 0px;
+    transition:  0.8s;
+}

@@ -26,6 +26,13 @@ hr {
     margin: 10px 10px 10px 10px;
 }
 
+.social_header:hover{
+    transform: scale(1.2);
+    transition: all 0.3s ease-in-out;
+}
+
+
+
 .left {
     display: flex;
 }
@@ -155,14 +162,7 @@ hr {
     border: none;
     cursor: pointer;
 }
-.item_one{
-    cursor: pointer;
-}
-.item_one:hover{
-    color:white;
-    transition: all 0.1s ease-in-out;
 
-}
 .menu_item:hover {
     /* From https://css.glass */
     background: rgba(255, 255, 255, 0.7);
