@@ -1,4 +1,5 @@
 nav {
+    z-index: 99;
     border-radius: 10px;
     display: flex;
     justify-content: center;
@@ -22,19 +23,25 @@ nav:hover {
 }
 
 .nav_products_menu {
-    background-color: #fffdfd;
-    border: 1px black solid;
-    border-radius: 5px;
-    display: none;
+    border-radius: 2px;
+    display: block;
     position: absolute;
     color: black;
     padding: 10px;
     z-index: 999;
     width: 250px;
-    height: 400px;
-    margin: 5px 0px 0px;
+    transition: height 0.5s;
 }
 
-.nav_products_menu_icon:hover + .nav_products_menu {
-    display: block;
+/*.nav_products_menu_icon:hover + .nav_products_menu{*/
+/*    display: block;*/
+/*}*/
+.nav_products_menu ul li {
+    padding: 10px;
+
+}
+.nav_products_menu ul li:hover {
+    background-color: #e3fcd8;
+    cursor: pointer;
+    border-radius: 5px;
 }

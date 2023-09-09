@@ -1,31 +1,9 @@
-// import {useContext} from "react"
-// import contextApi from "./../context/contextApi"
-
+import "./main.css"
 const Main = () => {
-    // const {filteredPlants, searchValue} = useContext(contextApi)
     return (
         <>
            <div className="">
-               {/*{*/}
-               {/*    searchValue ?*/}
-               {/*        (*/}
-               {/*            filteredPlants.map((plant) => {*/}
-               {/*                return <div className="card" key={plant.id}>*/}
-               {/*                    <div className="card-body">*/}
-               {/*                        <h5 className="card-title">{plant.name}</h5>*/}
-               {/*                        <p className="card-text">{plant.description}</p>*/}
-               {/*                    </div>*/}
-               {/*                </div>*/}
-               {/*            })*/}
-               {/*        )*/}
-               {/*        :*/}
-               {/*        (*/}
-               {/*            <div className="text-center">*/}
-               {/*                <h3>موردی یافت نشد</h3>*/}
-               {/*            </div>*/}
-
-               {/*        )*/}
-               {/*}*/}
+            <img className="w-100" style={{height: "100vh"}} src="https://img.freepik.com/premium-photo/large-foliage-tropical-leaf-with-dark-green-texture_1484-2219.jpg" alt="#"  />
            </div>
         </>
     )
