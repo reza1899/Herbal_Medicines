@@ -4,8 +4,27 @@ body {
 }
 
 header {
-    margin: 0px;
-    padding: 0px;
+    height: 100vh;
+    background-image: url("https://img.freepik.com/free-photo/green-leaf-texture-leaf-texture-background_501050-120.jpg?w=1480&t=st=1694241345~exp=1694241945~hmac=644659aaacc97d107197ca2ceb63a8dc027cd220d1f547222a72a0bc9c5c53ba");
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}
+header .header_overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+header .header_desc{
+    color: white;
+    position: absolute;
+    top: 40%;
+    left: 0;
+    right: 0;
+    text-align: center;
 }
 
 ul,
@@ -26,11 +45,10 @@ hr {
     margin: 10px 10px 10px 10px;
 }
 
-.social_header:hover{
+.social_header:hover {
     transform: scale(1.2);
     transition: all 0.3s ease-in-out;
 }
-
 
 
 .left {
@@ -69,10 +87,11 @@ hr {
     height: 80px;
     border-radius: 50%;
 }
+
 .container_m {
     border-bottom: 1px solid black;
     width: 100%;
-    background-color: ghostwhite;
+    background-color: rgba(0, 0, 0, 0.7);
     height: 80px;
 }
 
@@ -130,7 +149,6 @@ hr {
 /* float: right; */
 /* height: 100%; */
 /* } */
-
 
 
 /* .container_nav {

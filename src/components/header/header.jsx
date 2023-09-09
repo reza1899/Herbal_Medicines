@@ -24,34 +24,46 @@ const Navbar = () => {
     return (
         <>
             <header>
-                <div className="container_m">
-                    <div className="container">
-                        <div className="menu_icon">
-                            <button className="menu_button" onClick={() => {
-                                setShow(prevMargin => prevMargin === 0 ? -380 : 0)
-                            }}>
-                                <i className="fa fa-bars fs-5 m-2"></i>
-                            </button>
-                        </div>
-                        <div className="main_header">
-                            <img className="logo"
-                                 src="https://img.freepik.com/premium-photo/hand-draw-shampoo-bottel-vector-design_862994-17792.jpg?size=626&ext=jpg&ga=GA1.2.1004515625.1688841236&semt=ais"
-                                 alt=""/>
-                            <div className="left ">
-                                <div className="">
-                                    <a className="" href="https://www.instagram.com"><i
-                                        className="social_header fab fa-instagram fs-1 m-2" style={{color: "#C13584"}}></i></a>
-                                    <a className="" href="https://www.facebook.com"><i
-                                        className="social_header fab fa-facebook fs-1 m-2" style={{color: "#3B5998"}}></i></a>
-                                    <a className="" href="https://www.telegram.com"><i
-                                        className="social_header fab fa-telegram fs-1 m-2" style={{color: "#2AABEE"}}></i> </a>
+                <div className="header_overlay">
+                    <div className="container_m">
+                        <div className="container">
+                            <div className="menu_icon">
+                                <button className="menu_button" onClick={() => {
+                                    setShow(prevMargin => prevMargin === 0 ? -380 : 0)
+                                }}>
+                                    <i className="fa fa-bars fs-5 m-2"></i>
+                                </button>
+                            </div>
+                            <div className="main_header">
+                                <img className="logo"
+                                     src="https://img.freepik.com/premium-photo/hand-draw-shampoo-bottel-vector-design_862994-17792.jpg?size=626&ext=jpg&ga=GA1.2.1004515625.1688841236&semt=ais"
+                                     alt=""/>
+                                <div className="left ">
+                                    <div className="">
+                                        <a className="" href="https://www.instagram.com"><i
+                                            className="social_header fab fa-instagram fs-1 m-2"
+                                            style={{color: "#C13584"}}></i></a>
+                                        <a className="" href="https://www.facebook.com"><i
+                                            className="social_header fab fa-facebook fs-1 m-2"
+                                            style={{color: "#3B5998"}}></i></a>
+                                        <a className="" href="https://www.telegram.com"><i
+                                            className="social_header fab fa-telegram fs-1 m-2"
+                                            style={{color: "#2AABEE"}}></i> </a>
+                                    </div>
+                                    <Search/>
                                 </div>
-                                <Search/>
                             </div>
                         </div>
                     </div>
-                </div>
-                {/* <nav className="">
+                   <div className="header_desc">
+                       <h2 style={{fontSize:"50px"}}>
+                            داروهای گیاهی
+                       </h2>
+                       <p style={{fontSize:"25px"}}>
+                           محصولات گیاهی را از ما بخواهید...
+                       </p>
+                   </div>
+                    {/* <nav className="">
                     <div className="container_nav">
                         <div className="menu_icon">
                         <button className="menu_button" onClick={() => { setShow(prevMargin => prevMargin===0 ? -380 : 0) }}>
@@ -75,7 +87,8 @@ const Navbar = () => {
                         </div>
                     </div>
                 </nav> */}
-                {/* responsive nav */}
+                    {/* responsive nav */}
+                </div>
                 <div className="responsive_nav" ref={menuRef} style={{marginRight: show + "px"}}
                      onClick={e => e.stopPropagation()}>
                     <ul className="">
@@ -108,6 +121,7 @@ const Navbar = () => {
                 </div>
                 {/* end of responsive nav */}
             </header>
+            dfsdfdfsdf
         </>
     )
 }

@@ -10,7 +10,7 @@ import {
     Login,
     Register,
     Footer,
-    Navbar,
+    // Navbar,
 } from "./service/components";
 
 const App = () => {
@@ -38,9 +38,9 @@ const App = () => {
         }}>
             <div className="App">
                 {showNavbarAndFooter && <Header />}
-                {showNavbarAndFooter && <Navbar />}
+                {/*{showNavbarAndFooter && <Navbar />}*/}
 
-                <div className="app-wrapper">
+                <div className="">
                     <Routes>
                         <Route path="/" element={<Main/>} />
                         <Route path="/contact" element={<ContactUs />} />
@@ -49,7 +49,7 @@ const App = () => {
                         <Route path="/register" element={<Register />} />
                     </Routes>
                 </div>
-                <div className="footer">
+                <div className="">
                     {showNavbarAndFooter && <Footer />}
                 </div>
             </div>
