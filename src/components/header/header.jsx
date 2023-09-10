@@ -121,7 +121,6 @@ const Navbar = () => {
                 </div>
                 {/* end of responsive nav */}
             </header>
-            dfsdfdfsdf
         </>
     )
 }

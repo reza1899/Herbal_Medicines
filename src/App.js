@@ -40,7 +40,7 @@ const App = () => {
                 {showNavbarAndFooter && <Header />}
                 {/*{showNavbarAndFooter && <Navbar />}*/}
 
-                <div className="">
+                <div className="app-wrapper">
                     <Routes>
                         <Route path="/" element={<Main/>} />
                         <Route path="/contact" element={<ContactUs />} />
@@ -49,7 +49,7 @@ const App = () => {
                         <Route path="/register" element={<Register />} />
                     </Routes>
                 </div>
-                <div className="">
+                <div className="footer">
                     {showNavbarAndFooter && <Footer />}
                 </div>
             </div>
