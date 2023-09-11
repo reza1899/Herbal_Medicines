@@ -34,7 +34,7 @@
 .story_img img {
     border-radius: 10px;
     box-shadow: 5px 5px 5px 5px rgba(0, 0, 0, 0.2);
-    width: 500px;
+    width: 100%;
     height: 300px;
 }
 
@@ -59,7 +59,7 @@ sweet styles
 }
 .sweet_desc p {
     font-size: 25px;
-    width: 800px;
+    width: 80%;
     margin: auto;
 }
 .sweet_overlay {
@@ -73,7 +73,7 @@ sweet styles
 /*menu styles*/
 .menu{
     width: 100%;
-    height: 630px;
+    height: 700px;
     padding: 100px 0px;
 }
 .menu_desc{
@@ -98,7 +98,7 @@ sweet styles
 .menu_img img {
     border-radius: 5px;
     box-shadow: 5px 5px 5px 5px rgba(0, 0, 0, 0.2);
-    width: 300px;
+    width: 50%;
     height: 250px;
 }
 .menu_img ul {
@@ -109,4 +109,89 @@ sweet styles
     margin: 5px auto;
     float: right;
     text-align: left;
+}
+/* hot styles */
+.hot{
+    background-image: url("https://images.unsplash.com/photo-1496092607007-ca127e0b6a10?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2710&q=80");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    padding: 100px 0px;
+    width: 100%;
+    height: 500px;
+    position: relative;
+    margin: 100px 0px;
+}
+.hot_overlay{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+.hot_desc{
+    text-align: center;
+    color: #fff;
+    margin-top: 100px;
+    width: 100%;
+}
+.hot_desc p{
+    font-size: 25px;
+    width: 80%;
+    margin: auto;
+}
+.hot_desc h1{
+    margin-top: 140px;
+}
+/*
+    delight styles
+*/
+.delight{
+    width: 100%;
+    height: 700px;
+    padding: 100px 0px;
+}
+.delight_desc{
+    width: 50%;
+    float: right;
+    text-align: center;
+
+}
+.delight_desc h1{
+    margin-top: 120px;
+}
+.delight_desc p{
+    line-height: 30px;
+    width: 80%;
+    margin: auto;
+}
+.delight_img{
+    width: 50%;
+    float: right;
+
+}
+.delight_img img {
+    border-radius: 5px;
+    box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.2);
+    width: 100%;
+    height: 450px;
+}
+.delight_img ul {
+    width: 100%;
+}
+.delight_img ul li {
+    width: 40%;
+    margin: 0px 10px;
+    float: right;
+    text-align: left;
+}
+/*
+responsive styles
+*/
+
+@media screen and (max-width: 1400px){
+   .container{
+       width: 90%;
+   }
 }

@@ -1,3 +1,8 @@
+@media screen and (max-width : 992px) {
+    .header{
+        width: 90%;
+    }
+}
 body {
     margin: 0px;
     padding: 0px;
@@ -34,11 +39,6 @@ li {
     list-style: none;
 
 }
-
-/* Styles for the search box */
-
-
-/* Styles for the search box */
 
 
 hr {

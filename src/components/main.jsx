@@ -77,7 +77,48 @@ const Main = () => {
                     </div>
                 </div>
             </div>
-
+            {/*    hot section    */}
+            <div className="hot">
+                <div className="hot_overlay">
+                    <div className="container">
+                        <div className="hot_desc">
+                            <h1>داروهای گیاهی</h1>
+                            <p>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با استفاده از طراحان گرافیک
+                                است، چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است، و برای شرایط
+                                فعلی تکنولوژی مورد نیاز، و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد،
+                                کتابهای زیادی در شصت و سه درصد گذشته حال و آینده، شناخت فراوان
+                                جامعه و متخصصان را می طلبد،</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            {/*  delight section  */}
+            <div className="delight">
+                <div className="container">
+                    <div className="delight_desc">
+                        <h1>داروهای گیاهی</h1>
+                        <p>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با استفاده از طراحان گرافیک
+                            است، چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است، و برای شرایط
+                            فعلی تکنولوژی مورد نیاز، و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد،
+                            کتابهای زیادی در شصت و سه درصد گذشته حال و آینده، شناخت فراوان جامعه و متخصصان را می
+                            طلبد،</p>
+                    </div>
+                    <div className="delight_img">
+                        <ul>
+                            <li>
+                                <img
+                                    src="https://images.unsplash.com/photo-1655252205276-c4e210f36333?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2574&q=80"
+                                    alt="menu_image"/>
+                            </li>
+                            <li>
+                                <img
+                                    src="https://images.unsplash.com/photo-1531112606622-e8174567b048?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2588&q=80"
+                                    alt="menu_image"/>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
         </div>
     </>)
 }
