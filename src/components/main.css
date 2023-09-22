@@ -194,4 +194,44 @@ responsive styles
    .container{
        width: 90%;
    }
+    .menu_img img {
+        width: 80%;
+    }
+}
+@media screen and (max-width: 768px){
+
+    .sweet_desc p {
+        font-size: 15px;
+    }
+    .story_desc p{
+        font-size: 15px;
+        line-height: 15px;
+    }
+    .menu_img img{
+        width: 100%;
+    }
+    .menu_img{
+        width: 70%;
+    }
+    .menu_desc {
+        width: 30%;
+    }
+    .menu_desc p {
+        line-height: 20px;
+        font-size: 15px;
+    }
+    .menu_desc h1 {
+        margin-top: 30px;
+    }
+}
+@media screen and (max-width: 992px){
+    .sweet_desc p {
+        font-size: 20px;
+    }
+    .story_desc p{
+        line-height: 20px;
+    }
+    .menu_img img{
+        width: 90%;
+    }
 }

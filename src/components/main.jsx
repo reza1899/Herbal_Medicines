@@ -53,22 +53,22 @@ const Main = () => {
                     </div>
                     <div className="menu_img">
                         <ul>
-                            <li>
+                            <li className="li1">
                                 <img
                                     src="https://images.unsplash.com/photo-1655252205276-c4e210f36333?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2574&q=80"
                                     alt="menu_image"/>
                             </li>
-                            <li>
+                            <li className="li2">
                                 <img
                                     src="https://images.unsplash.com/photo-1531112606622-e8174567b048?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2588&q=80"
                                     alt="menu_image"/>
                             </li>
-                            <li>
+                            <li className="li3">
                                 <img
                                     src="https://images.unsplash.com/photo-1656501020056-1c631268e3d0?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2535&q=80"
                                     alt="menu_image"/>
                             </li>
-                            <li>
+                            <li className="li4">
                                 <img
                                     src="https://images.unsplash.com/photo-1659328376647-52ec39d1a5cf?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2574&q=80"
                                     alt="menu_image"/>
