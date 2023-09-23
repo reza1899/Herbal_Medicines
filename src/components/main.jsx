@@ -107,12 +107,12 @@ const Main = () => {
                         <ul>
                             <li>
                                 <img
-                                    src="https://images.unsplash.com/photo-1655252205276-c4e210f36333?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2574&q=80"
+                                    src="./../../images/gaby-yerden-nox4H2zsWR4-unsplash.jpg"
                                     alt="menu_image"/>
                             </li>
                             <li>
                                 <img
-                                    src="https://images.unsplash.com/photo-1531112606622-e8174567b048?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2588&q=80"
+                                    src="./../../images/annie-spratt-ia3MnWnTZFw-unsplash.jpg"
                                     alt="menu_image"/>
                             </li>
                         </ul>
