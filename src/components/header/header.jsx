@@ -1,8 +1,4 @@
-// import Search from "./searchBox"
-import {useNavigate} from "react-router-dom"
-import {useEffect, useRef, useState} from "react"
 import "./header.css"
-import MenuSearchBox from "./../searchBoxs/menu_search_Box"
 const Header = () => {
 
     return (
