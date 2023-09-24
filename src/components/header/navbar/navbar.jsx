@@ -1,48 +1,39 @@
-import "./navbar.css";
-import {useState} from "react";
+import Search from "../../searchBoxs/searchBox"
 
-const Navbar = () => {
-    const [isMenuOpen, setIsMenuOpen] = useState(false)
+const Navbar = ({setShow}) => {
     return (
         <>
-            <nav className="">
-                <div className="container" onMouseLeave={ setIsMenuOpen.bind(this, false)}>
-                    <div className="nav_products_menu_icon"
-
-                         onMouseOver={setIsMenuOpen.bind(this, true)}
-
-                    >
-                        <i className="fa fa-bars fs-5 mx-2 mt-1"></i>
-                        <p>نمایش محصولات</p>
-                        {isMenuOpen ? <i className="fas fa-angle-down fs-5 me-2 mt-1"></i>
-                            : <i className="fas fa-angle-up fs-5 me-2 mt-1"></i>
-                        }
+            <div className="container_m">
+                <div className="container">
+                    <div className="menu_icon">
+                        <button className="menu_button" onClick={() => {
+                            setShow(prevMargin => prevMargin === 0 ? -380 : 0)
+                        }}>
+                            <i className="fa fa-bars fs-5 m-2"></i>
+                        </button>
                     </div>
-
-                    {
-                        isMenuOpen && (
-                            <div className="nav_products_menu">
-                                <ul>
-                                    <li>ادویه ها</li>
-                                    <hr/>
-                                    <li>دمنوش ها</li>
-                                    <hr/>
-                                    <li>دانه ها</li>
-                                    <hr/>
-                                    <li>پماد ها</li>
-                                    <hr/>
-                                    <li>فرآورده ها</li>
-                                    <hr/>
-                                    <li>خوراکی ها</li>
-
-                                </ul>
+                    <div className="main_header">
+                        <img className="logo"
+                             src="https://img.freepik.com/premium-photo/hand-draw-shampoo-bottel-vector-design_862994-17792.jpg?size=626&ext=jpg&ga=GA1.2.1004515625.1688841236&semt=ais"
+                             alt=""/>
+                        <div className="left ">
+                            <div className="">
+                                <a className="" href="https://www.instagram.com"><i
+                                    className="social_header fab fa-instagram fs-1 m-2"
+                                    style={{color: "#C13584"}}></i></a>
+                                <a className="" href="https://www.facebook.com"><i
+                                    className="social_header fab fa-facebook fs-1 m-2"
+                                    style={{color: "#3B5998"}}></i></a>
+                                <a className="" href="https://www.telegram.com"><i
+                                    className="social_header fab fa-telegram fs-1 m-2"
+                                    style={{color: "#2AABEE"}}></i> </a>
                             </div>
-                        )
-                    }
+                            <Search/>
+                        </div>
+                    </div>
                 </div>
-            </nav>
+            </div>
         </>
     )
 }
-
-export default Navbar
+export default Navbar;

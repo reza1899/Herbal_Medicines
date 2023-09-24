@@ -10,7 +10,8 @@ import {
     Login,
     Register,
     Footer,
-    // Navbar,
+    TemperamentSurvey,
+    Navbar,
 } from "./service/components";
 
 const App = () => {
@@ -37,9 +38,9 @@ const App = () => {
             setIsLogin
         }}>
             <div className="App">
-                {showNavbarAndFooter && <Header />}
+                {showNavbarAndFooter && <Navbar />}
                 {/*{showNavbarAndFooter && <Navbar />}*/}
-
+                {location.pathname === "/" && <Header />}
                 <div className="app-wrapper">
                     <Routes>
                         <Route path="/" element={<Main/>} />
@@ -47,6 +48,7 @@ const App = () => {
                         <Route path="/blog" element={<Blog />} />
                         <Route path="/login" element={<Login />} />
                         <Route path="/register" element={<Register />} />
+                        <Route path="TS" element={<TemperamentSurvey />} />
                     </Routes>
                 </div>
                 <div className="footer">

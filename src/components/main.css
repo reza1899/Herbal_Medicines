@@ -350,7 +350,7 @@ responsive styles
 
     /*menu section*/
     .menu {
-        height: 1350px;
+        height: 1400px;
     }
 
     .menu_img ul li {
@@ -369,10 +369,10 @@ responsive styles
 
     /*    delight section*/
     .delight{
-        height: 1000px;
+        height: 1300px;
     }
     .delight_desc h1{
-        margin-top: 0px;
+        margin-top: -50px;
     }
     .delight_img ul li {
         width: 100%;

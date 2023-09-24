@@ -1,4 +1,4 @@
-import React, { useContext} from "react";
+import { useContext} from "react";
 import {plants} from "../../service/data";
 import "./search.css";
 import contextApi from "./../../context/contextApi";
