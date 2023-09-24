@@ -1,6 +1,24 @@
 import Search from "../../searchBoxs/searchBox"
+import {useEffect, useRef, useState} from "react"
+import {useNavigate} from "react-router-dom";
+import "./navbar.css"
+import MenuSearchBox from "../../searchBoxs/menu_search_Box";
+const Navbar = () => {
+    const navigate = useNavigate()
+    const [show, setShow] = useState(-380)
+    const menuRef = useRef(null)
 
-const Navbar = ({setShow}) => {
+    useEffect(() => {
+        const handleClickOutside = (event) => {
+            if (menuRef.current && !menuRef.current.contains(event.target)) {
+                setShow(-380)
+            }
+        }
+        document.addEventListener("mousedown", handleClickOutside)
+        return () => {
+            document.removeEventListener("mousedown", handleClickOutside)
+        }
+    }, [])
     return (
         <>
             <div className="container_m">
@@ -31,6 +49,36 @@ const Navbar = ({setShow}) => {
                             <Search/>
                         </div>
                     </div>
+                </div>
+                <div className="responsive_nav" ref={menuRef} style={{marginRight: show + "px"}}
+                     onClick={e => e.stopPropagation()}>
+                    <ul className="">
+                        <li className="d-flex justify-content-end "><p className="p-3 item_one" onClick={() => {
+                            setShow(-380)
+                        }}>بستن<i className="fa fa-times fs-5 m-3"></i></p></li>
+                        <hr/>
+                        <li className="menu_item"><MenuSearchBox/></li>
+                        <hr/>
+                        <li className="menu_item"><p className="p-3" onClick={() => {
+                            navigate("/")
+                        }}>خانه</p></li>
+                        <hr/>
+                        <li className="menu_item"><p className="p-3" onClick={() => {
+                            navigate("/contact")
+                        }}>تماس با ما</p></li>
+                        <hr/>
+                        <li className="menu_item"><p className="p-3" onClick={() => {
+                            navigate("/blog")
+                        }}>بلاگ</p></li>
+                        <hr/>
+                        <li className="menu_item"><p className="p-3" onClick={() => {
+                            navigate("/login")
+                        }}>ورود </p></li>
+                        <hr/>
+                        <li className="menu_item"><p className="p-3" onClick={() => {
+                            navigate("/register")
+                        }}>ثبت نام</p></li>
+                    </ul>
                 </div>
             </div>
         </>
