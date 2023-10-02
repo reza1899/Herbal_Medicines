@@ -5,13 +5,14 @@
     left: 5%;
     right: 5%;
     display: flex;
+    flex-wrap: wrap; /* Allow the cards to wrap to the next line */
     padding: 100px;
 }
 
 .blog {
     opacity: 0;
     transform: translateY(100px);
-    margin-top: 150px;
+    margin-top: 200px; /* Reduce the margin to make the cards stack closer */
     background: rgba(164, 250, 167, 0.51);
     border-radius: 16px;
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
@@ -19,19 +20,51 @@
     -webkit-backdrop-filter: blur(10.8px);
     border: 1px solid rgba(164, 250, 167, 0.52);
     transition: all 0.3s ease-in-out;
-    width: 500px;
-    height: 300px;
+    width: 100%; /* Make the cards take the full width */
+    min-height: 300px; /* Set a minimum height for the cards */
 }
 
 .blog_right {
     float: right;
-    position: sticky;
+    width: 40%;
 }
 
 .blog_left {
-    float: left;
     position: sticky;
+    float: left;
     right: 1400px;
-
+    width: 40%;
 }
 
+@media screen and (max-width: 1200px) {
+    .main_blog {
+        flex-direction: column; /* Stack cards vertically */
+        align-items: center; /* Center-align cards */
+    }
+
+    .blog {
+        width: 100%; /* Adjust the width for smaller screens */
+        margin-top:50px ;
+    }
+
+    .blog_right,
+    .blog_left {
+        width: 100%; /* Make them take full width on smaller screens */
+    }
+}
+@media screen and (max-width: 992px) {
+    .main_blog{
+        padding: 0px;
+        margin-top: 100px;
+        margin-bottom: 100px;
+    }
+    .blog{
+        margin-top: 50px;
+        width: 100%;
+    }
+}
+@media screen and (max-width: 768px) {
+    .main_blog{
+
+    }
+}

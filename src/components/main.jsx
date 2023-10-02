@@ -53,24 +53,24 @@ const Main = () => {
                     </div>
                     <div className="menu_img">
                         <ul>
-                            <li>
+                            <li className="">
                                 <img
-                                    src="https://images.unsplash.com/photo-1655252205276-c4e210f36333?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2574&q=80"
+                                    src="./../../images/alexander-grey-SavQfLRm4Do-unsplash.jpg"
                                     alt="menu_image"/>
                             </li>
-                            <li>
+                            <li className="">
                                 <img
-                                    src="https://images.unsplash.com/photo-1531112606622-e8174567b048?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2588&q=80"
+                                    src="./../../images/francisco-fajardo-O3X96iWeZeU-unsplash.jpg"
                                     alt="menu_image"/>
                             </li>
-                            <li>
+                            <li className="">
                                 <img
-                                    src="https://images.unsplash.com/photo-1656501020056-1c631268e3d0?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2535&q=80"
+                                    src="./../../images/heather-ford-Tinbs_bjKxA-unsplash.jpg"
                                     alt="menu_image"/>
                             </li>
-                            <li>
+                            <li className="">
                                 <img
-                                    src="https://images.unsplash.com/photo-1659328376647-52ec39d1a5cf?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2574&q=80"
+                                    src="./../../images/alexander-grey-1VsHkDCVzMQ-unsplash.jpg"
                                     alt="menu_image"/>
                             </li>
                         </ul>
@@ -107,12 +107,12 @@ const Main = () => {
                         <ul>
                             <li>
                                 <img
-                                    src="https://images.unsplash.com/photo-1655252205276-c4e210f36333?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2574&q=80"
+                                    src="./../../images/gaby-yerden-nox4H2zsWR4-unsplash.jpg"
                                     alt="menu_image"/>
                             </li>
                             <li>
                                 <img
-                                    src="https://images.unsplash.com/photo-1531112606622-e8174567b048?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2588&q=80"
+                                    src="./../../images/annie-spratt-ia3MnWnTZFw-unsplash.jpg"
                                     alt="menu_image"/>
                             </li>
                         </ul>
