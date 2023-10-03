@@ -10,9 +10,10 @@ body {
 
 header {
     height: 100vh;
-    background-image: url("https://img.freepik.com/free-photo/flat-lay-herbs-spices-medicinal-purpose_23-2148776520.jpg?w=1380&t=st=1694322963~exp=1694323563~hmac=09f7ebeb1ac61a2279d0f86d7720bb32185409fba8cfdc80a3a293838c562b40");
+    background-image: url("../../../public/images/heather-barnes-a1d-DBJ-bpw-unsplash.jpg");
     background-repeat: no-repeat;
     background-size: cover;
+    background-position: center; /* Center the background image */
     position: relative;
 }
 header .header_overlay {

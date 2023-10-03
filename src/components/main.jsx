@@ -16,7 +16,7 @@ const Main = () => {
                     </div>
                     <div className="story_img">
                         <img
-                            src="https://img.freepik.com/free-photo/love-blooms-heart-shaped-bouquet-flowers-generated-by-ai_188544-44585.jpg?t=st=1694323004~exp=1694326604~hmac=ffd53eab64371d39354b9359bd0148229371b30ffea045e58ab397723b32d2e1&w=1800"
+                            src ="../../images/tasty-fresh-green-tea-glass-teapot-ceremony-dark-background.jpg"
                             alt="story_image"/>
                     </div>
                 </div>
