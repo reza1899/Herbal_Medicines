@@ -1,10 +1,13 @@
 import Search from "../../searchBoxs/searchBox"
 import {useEffect, useRef, useState} from "react"
-import {useNavigate} from "react-router-dom";
+import {useNavigate,useLocation} from "react-router-dom";
 import "./navbar.css"
 import MenuSearchBox from "../../searchBoxs/menu_search_Box";
+import SecondNavbar from "./sec_navbar/secondNavbar";
 const Navbar = () => {
     const navigate = useNavigate()
+    const location = useLocation()
+    const secondNavbarClass = location.pathname === "/" ? "main-page-navbar" : "other-page-navbar"
     const [show, setShow] = useState(-380)
     const menuRef = useRef(null)
 
@@ -78,9 +81,17 @@ const Navbar = () => {
                         <li className="menu_item"><p className="p-3" onClick={() => {
                             navigate("/register")
                         }}>ثبت نام</p></li>
+                        <hr/>
+                        <li className="menu_item"><p className="p-3" onClick={() => {
+                            navigate("/ts")
+                        }}>مزاج شناسی</p></li>
                     </ul>
                 </div>
             </div>
+            {
+                location.pathname === "/" ? <SecondNavbar style={{position:"absolute"}}/> : <SecondNavbar style={{position:"relative"}}/>
+            }
+
         </>
     )
 }

@@ -45,6 +45,13 @@ nav:hover {
     cursor: pointer;
     border-radius: 5px;
 }
+.main-page-navbar {
+    position: absolute;
+
+}
+.other-page-navbar {
+    position: relative;
+}
 @media screen and (max-width: 990px) {
     .main_header {
         display: none;
