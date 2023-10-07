@@ -1,8 +1,18 @@
 import "./sec_navbar.css"
-import {useNavigate} from "react-router-dom";
+import {useNavigate,useLocation} from "react-router-dom";
+import {useEffect} from "react";
 
 const SecondNavbar = () => {
+    const location = useLocation()
     const navigate = useNavigate()
+    useEffect(()=>{
+        if(location.pathname === "/"){
+            document.querySelector(".main_navbar").style.position = "absolute"
+        }
+        else{
+            document.querySelector(".main_navbar").style.position = "relative"
+        }
+    })
     return (
         <>
             <div className="main_navbar">

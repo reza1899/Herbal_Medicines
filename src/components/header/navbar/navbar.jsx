@@ -1,15 +1,25 @@
 import Search from "../../searchBoxs/searchBox"
 import {useEffect, useRef, useState} from "react"
-import {useNavigate,useLocation} from "react-router-dom";
+import {useNavigate} from "react-router-dom";
 import "./navbar.css"
 import MenuSearchBox from "../../searchBoxs/menu_search_Box";
 import SecondNavbar from "./sec_navbar/secondNavbar";
 const Navbar = () => {
     const navigate = useNavigate()
-    const location = useLocation()
-    const secondNavbarClass = location.pathname === "/" ? "main-page-navbar" : "other-page-navbar"
+    // const secondNavbarClass = location.pathname === "/" ? "main-page-navbar" : "other-page-navbar"
     const [show, setShow] = useState(-380)
     const menuRef = useRef(null)
+
+    // const calculateSecondNavbarProps = (location) => {
+    //     if (location.pathname === "/") {
+    //         return { position: "absolute" };
+    //     } else {
+    //         return { position: "relative" };
+    //     }
+    // };
+    // const secondNavbarProps = calculateSecondNavbarProps(location);
+    // setNavbarClass(secondNavbarProps.position)
+    // console.log(secondNavbarProps.position)
 
     useEffect(() => {
         const handleClickOutside = (event) => {
@@ -88,9 +98,7 @@ const Navbar = () => {
                     </ul>
                 </div>
             </div>
-            {
-                location.pathname === "/" ? <SecondNavbar style={{position:"absolute"}}/> : <SecondNavbar style={{position:"relative"}}/>
-            }
+            <SecondNavbar/>
 
         </>
     )
