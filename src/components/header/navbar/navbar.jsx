@@ -6,21 +6,8 @@ import MenuSearchBox from "../../searchBoxs/menu_search_Box";
 import SecondNavbar from "./sec_navbar/secondNavbar";
 const Navbar = () => {
     const navigate = useNavigate()
-    // const secondNavbarClass = location.pathname === "/" ? "main-page-navbar" : "other-page-navbar"
     const [show, setShow] = useState(-380)
     const menuRef = useRef(null)
-
-    // const calculateSecondNavbarProps = (location) => {
-    //     if (location.pathname === "/") {
-    //         return { position: "absolute" };
-    //     } else {
-    //         return { position: "relative" };
-    //     }
-    // };
-    // const secondNavbarProps = calculateSecondNavbarProps(location);
-    // setNavbarClass(secondNavbarProps.position)
-    // console.log(secondNavbarProps.position)
-
     useEffect(() => {
         const handleClickOutside = (event) => {
             if (menuRef.current && !menuRef.current.contains(event.target)) {

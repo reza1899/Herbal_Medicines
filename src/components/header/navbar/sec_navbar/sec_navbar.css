@@ -12,6 +12,7 @@
     display: flex;
     align-items: center;
 }
+
 ul{
     list-style: none;
 
@@ -30,6 +31,103 @@ ul.w-100 li:hover{
 .auth:hover{
     transition: 0.8s;
     text-decoration:  underline;
+}
+/*about us dropdown section*/
+.div-aboutUs {
+    display: block;
+    opacity: 0;
+    transform: translatex(-20px); /* Start offscreen above */
+    transition: opacity 0.3s ease, transform 0.3s ease; /* Transition for opacity and transform */
+}
+
+.div-aboutUs-show {
+    display: block;
+    opacity: 1;
+    transition:  opacity 0.3s ease, transform 0.3s ease;
+    transform: translateY(0); /* Move to the normal position */
+}
+div.aboutUs_d{
+    z-index: 99;
+    position: absolute;
+    height: 160px;
+    width: 200px;
+    background-color: #ffffff;
+    top: 101%;
+    right: 65%;
+    display: block;
+    border-radius: 5px;
+}
+div.aboutUs_d ul li{
+    height: 30px;
+}
+
+div.aboutUs_d ul li :hover{
+    transition: 0.3s;
+    /*text-decoration:  underline;*/
+    background-color: #6a9dfc;
+    border-radius: 10px;
+    color: white;
+}
+
+div.aboutUs_d ul li p{
+    padding: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+    margin:  15px 20px 10px 20px;
+    font-size:  16px;
+    text-align: right;
+    color: #bbbbbb;
+}
+hr{
+    margin: 0px 20px 0px 20px;
+    color: #bbbbbb;
+}
+
+
+/*blog dropdown section */
+
+div.blog_d{
+    z-index: 99;
+    position: absolute;
+    height: 160px;
+    width: 200px;
+    background-color: #ffffff;
+    top: 101%;
+    right: 44%;
+    display: block;
+    border-radius: 5px;
+}
+.div-blog {
+    display: block;
+    opacity: 0;
+    transform: translatex(-20px); /* Start offscreen above */
+    transition: opacity 0.3s ease, transform 0.3s ease; /* Transition for opacity and transform */
+}
+
+.div-blog-show {
+    display: block;
+    opacity: 1;
+    transition:  opacity 0.3s ease, transform 0.3s ease;
+    transform: translateY(0); /* Move to the normal position */
+}
+div .blog_d ul li {
+    height: 30px;
+}
+div.blog_d ul li :hover{
+    transition: 0.3s;
+    /*text-decoration:  underline;*/
+    background-color: #6a9dfc;
+    border-radius: 10px;
+    color: white;
+}
+div.blog_d ul li p{
+    padding: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+    margin:  15px 20px 10px 20px;
+    font-size:  16px;
+    text-align: right;
+    color: #bbbbbb;
 }
 @media screen and (max-width: 990px) {
     .main_navbar {
