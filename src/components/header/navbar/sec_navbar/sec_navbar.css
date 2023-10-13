@@ -34,25 +34,24 @@ ul.w-100 li:hover{
 }
 /*about us dropdown section*/
 .div-aboutUs {
-    display: block;
+    visibility: hidden;
     opacity: 0;
     transform: translatex(-20px); /* Start offscreen above */
     transition: opacity 0.3s ease, transform 0.3s ease; /* Transition for opacity and transform */
 }
 
 .div-aboutUs-show {
-    display: block;
+    visibility: visible;
     opacity: 1;
     transition:  opacity 0.3s ease, transform 0.3s ease;
     transform: translateY(0); /* Move to the normal position */
 }
 div.aboutUs_d{
-    z-index: 99;
     position: absolute;
     height: 160px;
     width: 200px;
     background-color: #ffffff;
-    top: 101%;
+    top: 80%;
     right: 65%;
     display: block;
     border-radius: 5px;
@@ -87,25 +86,23 @@ hr{
 /*blog dropdown section */
 
 div.blog_d{
-    z-index: 99;
     position: absolute;
     height: 160px;
     width: 200px;
     background-color: #ffffff;
-    top: 101%;
+    top: 80%;
     right: 44%;
-    display: block;
     border-radius: 5px;
 }
 .div-blog {
-    display: block;
+    visibility: hidden;
     opacity: 0;
     transform: translatex(-20px); /* Start offscreen above */
     transition: opacity 0.3s ease, transform 0.3s ease; /* Transition for opacity and transform */
 }
 
 .div-blog-show {
-    display: block;
+    visibility: visible;
     opacity: 1;
     transition:  opacity 0.3s ease, transform 0.3s ease;
     transform: translateY(0); /* Move to the normal position */
