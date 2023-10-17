@@ -9,24 +9,28 @@ const Search = () => {
 
     const handleFocus = () => {
         setSearchResult(true);
+
     };
 
     const handleBlur = () => {
         setSearchResult(false);
+
     };
+    const [lastSearches, setLastSearches] = useState([]);
 
-
-    const {setFilteredPlants ,setSearchValue ,searchValue} = useContext(contextApi);
+    const {setFilteredPlants} = useContext(contextApi);
     let FilteredTimeout;
-    const searching = () => {
-        clearTimeout(FilteredTimeout)
+    const searching = (value) => {
+        lastSearches.push(value);
+        console.log(lastSearches)
+        clearTimeout(FilteredTimeout); // Clear the timeout
         FilteredTimeout = setTimeout(() => {
             setFilteredPlants(plants.filter((plant) => {
-                return plant.name.toLowerCase().includes(searchValue)
-            }))
-        }, 1000)
-
+                return plant.name.toLowerCase().includes(value.toLowerCase());
+            }));
+        }, 1000);
     }
+
     return (
         <>
             <div className="search-box text-center">
@@ -36,19 +40,17 @@ const Search = () => {
                     className="search"
                     placeholder="جستجو کنید"
                     type="text"
-                    onChange={event => searching(setSearchValue(event.target.value))}
+                    onChange={event => searching(event.target.value)}
                     onFocus={handleFocus}
                     onBlur={handleBlur}
                 />
                 <br/>
             </div>
-            {
-                searchResult ? (
-                    <div className="search-result">
+
+                    <div className={`search-result ${searchResult ? 'active' : ''}`}>
                         reza is good
                     </div>
-                ) : null
-            }
+
         </>
     );
 };

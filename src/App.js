@@ -15,7 +15,6 @@ import {
 } from "./service/components";
 
 const App = () => {
-    const [searchValue, setSearchValue] = useState("");
     const [loading, setLoading] = useState(false);
     const [filteredPlants, setFilteredPlants] = useState([]);
     const [isLogin, setIsLogin] = useState();
@@ -28,8 +27,6 @@ const App = () => {
 
     return (
         <contextApi.Provider value={{
-            searchValue,
-            setSearchValue,
             loading,
             setLoading,
             filteredPlants,
