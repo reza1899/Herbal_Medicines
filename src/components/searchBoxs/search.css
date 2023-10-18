@@ -59,7 +59,7 @@
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
     transition: opacity 0.3s, transform 0.3s;
     visibility: hidden;
-    transform: translate3d(300px, 0px, 0);
+    transform: translate3d(150px, 0px, 0px);
 }
 
 .search-result.active {

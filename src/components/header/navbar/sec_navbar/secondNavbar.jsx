@@ -80,7 +80,7 @@ const SecondNavbar = () => {
                 <div className={`blog_d ${showBlog ? 'div-blog-show' : 'div-blog'}`}
                      onMouseOver={() => setShowBlog(true)} onMouseLeave={() => setShowBlog(false)}>
                     <ul>
-                        <li>
+                        <li onClick={() => navigate("/blog")}>
                             <p>اطلاعات کلی</p>
                         </li>
                         <hr/>
