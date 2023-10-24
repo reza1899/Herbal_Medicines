@@ -4,7 +4,7 @@ const Footer = () => {
         <>
             <div className="gradient-container">
                 <div className="text-center p-5">
-                    <h4>گل دارو</h4>
+                    <h4>گل دارو </h4>
                     <img className="img_footer" src="https://img.freepik.com/premium-photo/hand-draw-shampoo-bottel-vector-design_862994-17792.jpg?size=626&ext=jpg&ga=GA1.2.1004515625.1688841236&semt=ais" alt="" />
                 </div>
                 <div className="row m-0 d-flex">
