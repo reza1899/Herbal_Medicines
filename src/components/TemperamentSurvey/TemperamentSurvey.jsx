@@ -1,4 +1,5 @@
-import React, {useState} from 'react';
+import {useState} from 'react';
+import "./TemperamentSurvey.css";
 
 const questions = [{
     question: 'معمولا رنگ چهره شما چگونه است ؟', options: ['سفید', 'تیره', "مایل به زرد", "مایل به قرمز"],
@@ -194,23 +195,90 @@ const TemperamentSurvey = () => {
         }
     };
 
-    if (temperament) {
-        return (<div>
-            <h1>Your Temperament is: {temperament}</h1>
-        </div>);
-    }
-
+    // if (temperament) {
+    //     return (<div>
+    //         <h1>Your Temperament is: {temperament}</h1>
+    //     </div>);
+    // }
+    const [isReady, setIsReady] = useState(0);
     return (
 
         <>
-            <div>
-                <h1>Temperament Quiz</h1>
-                <p>{questions[currentQuestion].question}</p>
-                {questions[currentQuestion].options.map((option) => (
-                    <button key={option} onClick={() => handleAnswer(option)}>
-                        {option}
-                    </button>))}
-            </div>
+            {isReady===0 && (
+                <div className="basic-description">
+                    <div className="basic-description-right">
+                       <h1 className="header-des">
+                           طب سنتی برای همه;
+                       </h1>
+                        <p className="start-text ">
+                            آزمون مزاج شناسی یک ابزار جالب برای درک مزاج شخصیتی خود است. مزاج شخصیتی نحوه عملکرد و واکنش‌های شما در مواجهه با موقعیت‌های مختلف را نمایان می‌کند.
+                        </p>
+                        <p className="fs-4 mt-4 text-danger">
+                            هشدار:
+                        </p>
+                        <p className="warning-text">
+                            لطفاً توجه داشته باشید که این آزمون تنها یک ابزار تفریحی و آموزشی است و نباید برای اندازه‌گیری دقیق مزاج شناسی پزشکی مورد استفاده قرار گیرد. در صورت نگرانی‌های جدی در مورد سلامتی خود، با پزشک خود مشورت کنید.
+                        </p>
+                    </div>
+                    <img className="doctor-img floating-animation" src="../../../images/Medicine-amico.png" alt="doctor icon" />
+
+                </div>
+            )}
+            {/*get start*/}
+            {isReady === 1 && (
+                // Section 1: Display the start screen
+                <div className="temperament-quiz-start">
+                    <div className="header-start">
+                        <h1>
+                            آزمون مزاج شناسی
+
+                        </h1>
+                        <hr className=" border border-success border-3"/>
+                    </div>
+                    <button className="start-button border border-success" onClick={() => setIsReady(1)}>
+                        <p className=" fs-4 m-0">
+                            شروع آزمون
+                        </p>
+                        <i className="start-icon fas fa-arrow-left fs-4"></i>
+                    </button>
+                </div>
+            )}
+            {/*
+                questions test
+            */}
+            {isReady === 2 && !temperament && (
+                <div className="questions-content">
+                    <h1>
+                        آزمون مزاج شناسی
+                    </h1>
+                    <div>
+                        <p className="mt-4">
+                            سوال {currentQuestion + 1} از{questions.length}
+                        </p>
+                        <p className="fs-4">
+                            {questions[currentQuestion].question}
+                        </p>
+                        <div>
+                            {questions[currentQuestion].options.map((option) => (
+                                <button className="answer-button border border-secondary" key={option} onClick={() => handleAnswer(option)}>
+                                    {option}
+                                </button>
+                            ))}
+                        </div>
+                    </div>
+                </div>
+            )}
+            {isReady === 2 && temperament && (
+                <div className="result-container">
+                    <h1 className="result-title">نتیجه آزمون مزاج شناسی</h1>
+                    <div className="result-content">
+                        <p className="result-text">
+                            تبریک! مزاج شما: <span className="temperament-name">{temperament}</span>
+                        </p>
+                        {/* You can add more details or explanations here */}
+                    </div>
+                </div>
+            )}
         </>
 
 

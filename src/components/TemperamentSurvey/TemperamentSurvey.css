@@ -1,0 +1,175 @@
+/*
+    basic description
+*/
+.basic-description{
+    width: 90%;
+    position: absolute;
+    top: 30%;
+    right: 5%;
+    left: 5%;
+    display: flex;
+    justify-content: space-around;
+}
+.basic-description-right{
+    width: 50%;
+    line-height: 60px;
+}
+.doctor-img{
+    width: 500px;
+    height: 500px;
+    z-index: -1;
+}
+.header-des{
+    color: #007077;
+}
+.start-text{
+    font-size: 26px;
+    white-space: pre-line;
+    margin-top: 20px;
+}
+.warning-text{
+    font-size: 25px;
+    white-space: pre-line;
+}
+@keyframes floating {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px); /* Adjust the value for the desired vertical motion */
+    }
+}
+
+.floating-animation {
+    animation: floating 2s ease-in-out infinite; /* Adjust the animation duration and timing function */
+}
+/*
+    get start for questions styles
+*/
+.temperament-quiz-start{
+    position: absolute;
+    top: 30%;
+    left: 41%;
+}
+@media screen and (max-width: 992px) {
+    .temperament-quiz-start{
+        left: 35%;
+    }
+    .start-button{
+        margin-right: 30px !important;
+    }
+}
+@media screen and (max-width: 768px) {
+    .temperament-quiz-start{
+        left: 25%;
+    }
+    .start-button{
+        margin-right: 15px !important;
+    }
+}
+.header-start{
+    margin-bottom: 200px;
+}
+.start-button{
+    width: 170px;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: ghostwhite;
+    transition:  0.3s;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    margin-right: 60px;
+}
+.start-button:hover{
+    background-color: #2bb224;
+    color: ghostwhite;
+    width: 200px;
+}
+.start-icon{
+    display: none;
+    transition:  0.4s;
+    margin-right: 15px;
+    color: ghostwhite;
+}
+.start-button:hover .start-icon{
+    display: block;
+}
+
+/*
+    questions content styles
+*/
+
+.questions-content{
+    width: 50%;
+    position: absolute;
+    top: 30%;
+    left: 25%;
+    text-align: center;
+}
+.answer-button{
+    width:200px;
+    margin: 10px auto;
+    height: auto;
+    line-height:  40px;
+    border-radius: 10px;
+    background-color: ghostwhite;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    display: block;
+    transition-duration:  0.3s;
+}
+.answer-button:hover{
+    background-color: #2bb224;
+    color: ghostwhite;
+}
+@media screen and (max-width: 992px) {
+    .questions-content{
+        left: 25%;
+    }
+    @media screen and (max-width: 768px) {
+        .questions-content{
+            left: 25%;
+        }
+    }
+    @media screen and (max-width: 576px) {
+        .questions-content{
+            left: 25%;
+        }
+    }
+}
+/*
+ result test styles
+*/
+.result-container {
+    position: absolute;
+    top: 50%;
+    left: 41%;
+    background-color: #f0f0f0;
+    border: 1px solid #ccc;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    margin: 20px auto;
+    max-width: 500px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+}
+
+.result-title {
+    font-size: 24px;
+    color: #333;
+}
+
+.result-content {
+    margin-top: 20px;
+}
+
+.result-text {
+    font-size: 18px;
+    color: #444;
+}
+
+.temperament-name {
+    font-weight: bold;
+    color: #007BFF; /* Change color to your preference */
+}
