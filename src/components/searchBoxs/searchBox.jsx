@@ -8,17 +8,25 @@ const Search = () => {
     const inputRef = useRef(null);
 
     const handleFocus = () => {
-        setSearchResult(true);
+        const searchBox = document.getElementById("searchBox");
+        const searchText = searchBox.value;
+        if (searchText.trim() === "") {
+            setSearchResult(false)
+        } else {
+            setSearchResult(true);
+        }
     };
 
     const handleBlur = () => {
         setSearchResult(false);
+
     };
 
     const {setFilteredPlants, filteredPlants} = useContext(contextApi);
 
     const searching = (value) => {
-        value ? setFilteredPlants(plants.filter((plant) => plant.name.includes(value))) :
+        value ?
+            setFilteredPlants(plants.filter((plant) => plant.name.includes(value))) :
             setFilteredPlants([]);
 
     };
@@ -33,12 +41,13 @@ const Search = () => {
             <div className="search-box text-center">
                 <i className="fas fa-search search-icon text-muted"></i>
                 <input
+                    id="searchBox"
                     ref={inputRef}
                     className="search"
                     placeholder="جستجو کنید"
                     type="text"
                     onChange={handleInputChange}
-                    onFocus={handleFocus}
+                    onInput={handleFocus}
                     onBlur={handleBlur}
                 />
                 <br/>
@@ -56,10 +65,8 @@ const Search = () => {
                             </div>
                         ))
                     ) : (
-                        <p>No matching plants found.</p>
+                        <p className="text-muted fs-3">موردی یافت نشد ☹️ </p>
                     )}
-                    <br/>
-                    <br/>
                 </div>
             </div>
         </>

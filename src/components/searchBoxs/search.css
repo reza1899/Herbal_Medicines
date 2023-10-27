@@ -56,11 +56,14 @@
     right: 1100px;
     position: absolute;
     height: 400px;
-    background-color: #fff;
+    background-color: rgba(248, 248, 255, 0.88);
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-    transition: opacity 0.3s, transform 0.3s;
+    transition: opacity 0.9s, transform 0.8s;
     visibility: hidden;
     transform: translate3d(150px, 0px, 0px);
+}
+.search-result p {
+    margin-top: 150px;
 }
 
 .search-result.active {
@@ -72,7 +75,6 @@
     align-items: center;
     padding: 10px 10px ;
     cursor: pointer;
-    transition: 0.3s;
     color: #000000;
     font-size: 20px;
     font-weight: 500;
