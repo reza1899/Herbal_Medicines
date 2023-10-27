@@ -1,7 +1,8 @@
 import React from 'react';
 import './TemperamentSurvey.css';
-const TemperamentModal = ({ isOpen, closeModal, setIsReady }) => {
-    const handleEvent =  () => {
+
+const TemperamentModal = ({isOpen, closeModal, setIsReady}) => {
+    const handleEvent = () => {
         setIsReady(2)
         window.scrollTo(0, 0);
     }

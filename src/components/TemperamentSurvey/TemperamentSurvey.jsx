@@ -215,27 +215,33 @@ const TemperamentSurvey = () => {
     return (
 
         <>
-            {isReady===0 && (
+            {isReady === 0 && (
                 <div className="basic-description">
                     <div className="basic-description-right">
-                       <h1 className="header-des">
-                           طب سنتی برای همه;
-                       </h1>
-                       <hr className="header-line border border-4 border-success"/>
+                        <h1 className="header-des">
+                            طب سنتی برای همه;
+                        </h1>
+                        <hr className="header-line border border-4 border-success"/>
                         <p className="start-text ">
-                            آزمون مزاج شناسی یک ابزار جالب برای درک مزاج شخصیتی خود است. مزاج شخصیتی نحوه عملکرد و واکنش‌های شما در مواجهه با موقعیت‌های مختلف را نمایان می‌کند.
+                            آزمون مزاج شناسی یک ابزار جالب برای درک مزاج شخصیتی خود است. مزاج شخصیتی نحوه عملکرد و
+                            واکنش‌های شما در مواجهه با موقعیت‌های مختلف را نمایان می‌کند.
                         </p>
                         <p className="fs-4 mt-4 text-danger">
                             هشدار:
                         </p>
                         <p className="warning-text">
-                            لطفاً توجه داشته باشید که این آزمون تنها یک ابزار تفریحی و آموزشی است و نباید برای اندازه‌گیری دقیق مزاج شناسی پزشکی مورد استفاده قرار گیرد. در صورت نگرانی‌های جدی در مورد سلامتی خود، با پزشک خود مشورت کنید.
+                            لطفاً توجه داشته باشید که این آزمون تنها یک ابزار تفریحی و آموزشی است و نباید برای
+                            اندازه‌گیری دقیق مزاج شناسی پزشکی مورد استفاده قرار گیرد. در صورت نگرانی‌های جدی در مورد
+                            سلامتی خود، با پزشک خود مشورت کنید.
                         </p>
-                        <button className="basic-start-button border border-success " onClick={openModal}>آزمون مزاج شناسی</button>
-                        <TemperamentModal isOpen={isModalOpen} closeModal={closeModal} setIsReady={setIsReady} />
+                        <button className="basic-start-button border border-success " onClick={openModal}>آزمون مزاج
+                            شناسی
+                        </button>
+                        <TemperamentModal isOpen={isModalOpen} closeModal={closeModal} setIsReady={setIsReady}/>
 
                     </div>
-                    <img className="doctor-img floating-animation" src="../../../images/Medicine-amico (1).png" alt="doctor icon" />
+                    <img className="doctor-img floating-animation" src="../../../images/Medicine-amico (1).png"
+                         alt="doctor icon"/>
 
                 </div>
             )}
@@ -274,7 +280,8 @@ const TemperamentSurvey = () => {
                         </p>
                         <div>
                             {questions[currentQuestion].options.map((option) => (
-                                <button className="answer-button border border-secondary" key={option} onClick={() => handleAnswer(option)}>
+                                <button className="answer-button border border-secondary" key={option}
+                                        onClick={() => handleAnswer(option)}>
                                     {option}
                                 </button>
                             ))}

@@ -1,4 +1,4 @@
-import { useContext,useRef, useState } from "react";
+import {useContext, useRef, useState} from "react";
 import {plants} from "../../service/data";
 import "./search.css";
 import contextApi from "./../../context/contextApi";
@@ -9,48 +9,59 @@ const Search = () => {
 
     const handleFocus = () => {
         setSearchResult(true);
-
     };
 
     const handleBlur = () => {
         setSearchResult(false);
+    };
+
+    const {setFilteredPlants, filteredPlants} = useContext(contextApi);
+
+    const searching = (value) => {
+        value ? setFilteredPlants(plants.filter((plant) => plant.name.includes(value))) :
+            setFilteredPlants([]);
 
     };
-    const [lastSearches, setLastSearches] = useState([]);
 
-    const {setFilteredPlants} = useContext(contextApi);
-    let FilteredTimeout;
-    const searching = (value) => {
-        lastSearches.push(value);
-        console.log(lastSearches)
-        clearTimeout(FilteredTimeout); // Clear the timeout
-        FilteredTimeout = setTimeout(() => {
-            setFilteredPlants(plants.filter((plant) => {
-                return plant.name.toLowerCase().includes(value.toLowerCase());
-            }));
-        }, 1000);
-    }
+    const handleInputChange = (event) => {
+        const {value} = event.target;
+        searching(value);
+    };
 
     return (
         <>
             <div className="search-box text-center">
                 <i className="fas fa-search search-icon text-muted"></i>
                 <input
-                    ref={ inputRef }
+                    ref={inputRef}
                     className="search"
                     placeholder="جستجو کنید"
                     type="text"
-                    onChange={event => searching(event.target.value)}
+                    onChange={handleInputChange}
                     onFocus={handleFocus}
                     onBlur={handleBlur}
                 />
                 <br/>
             </div>
 
-                    <div className={`search-result ${searchResult ? 'active' : ''}`}>
-                        reza is good
-                    </div>
-
+            <div className={`search-result ${searchResult ? "active" : ""}`}>
+                <div className="text-center">
+                    {filteredPlants.length > 0 ? (
+                        filteredPlants.map((plant) => (
+                            <div>
+                                <div key={plant.id} className="search-result-item">
+                                    <p className="m-0">{plant.name}</p>
+                                </div>
+                                <hr/>
+                            </div>
+                        ))
+                    ) : (
+                        <p>No matching plants found.</p>
+                    )}
+                    <br/>
+                    <br/>
+                </div>
+            </div>
         </>
     );
 };

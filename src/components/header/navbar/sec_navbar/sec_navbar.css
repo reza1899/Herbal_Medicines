@@ -63,7 +63,8 @@ div.aboutUs_d ul li{
 div.aboutUs_d ul li :hover{
     transition: 0.3s;
     /*text-decoration:  underline;*/
-    background-color: #6a9dfc;
+    /*background-color: #6a9dfc;*/
+    background-color: #198653;
     border-radius: 10px;
     color: white;
 }
@@ -113,7 +114,8 @@ div .blog_d ul li {
 div.blog_d ul li :hover{
     transition: 0.3s;
     /*text-decoration:  underline;*/
-    background-color: #6a9dfc;
+    /*background-color: #6a9dfc;*/
+    background-color: #198653;
     border-radius: 10px;
     color: white;
 }

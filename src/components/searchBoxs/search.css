@@ -48,13 +48,14 @@
 
 /*search result */
 .search-result {
+    overflow: auto;
     border-radius: 8px;
     padding: 10px;
     z-index: 100;
     top: 80px;
     right: 1100px;
     position: absolute;
-    height: 200px;
+    height: 400px;
     background-color: #fff;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
     transition: opacity 0.3s, transform 0.3s;
@@ -66,6 +67,53 @@
     visibility: visible;
     transform: translateY(0);
 }
+
+.search-result-item{
+    align-items: center;
+    padding: 10px 10px ;
+    cursor: pointer;
+    transition: 0.3s;
+    color: #000000;
+    font-size: 20px;
+    font-weight: 500;
+    text-decoration: none;
+    display: block;
+    width: 90%;
+    text-align: right;
+    margin:  10px 0px 10px 0px;
+}
+.search-result-item:hover{
+    background-color: #198653;
+    color: #fff;
+    transition: 0.3s;
+    width: 100%;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+/* width */
+/* Scrollbar */
+::-webkit-scrollbar {
+    width: 7px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: #f0f0f0; /* Background color for the scrollbar track */
+    border-radius: 100px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: #111; /* Color of the scrollbar handle */
+    border-radius: 50px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #555; /* Color of the scrollbar handle on hover */
+}
+
 
 @media screen and (max-width: 1800px) {
     .search-result {
