@@ -60,15 +60,15 @@ const SecondNavbar = () => {
                 <div className={`aboutUs_d ${showAboutUs ? 'div-aboutUs-show' : 'div-aboutUs'}`}
                      onMouseOver={() => setShowAboutUs(true)} onMouseLeave={() => setShowAboutUs(false)}>
                     <ul>
-                        <li>
+                        <li onClick={() => navigate ("/blogs") }>
                             <p>درباره ی ما</p>
                         </li>
                         <hr/>
-                        <li>
+                        <li onClick={() => navigate ("/blogs") }>
                             <p>تماس با ما</p>
                         </li>
                         <hr/>
-                        <li>
+                        <li onClick={() => navigate ("/blogs") }>
                             <p>سوالات متداول</p>
                         </li>
 
@@ -84,11 +84,11 @@ const SecondNavbar = () => {
                             <p>اطلاعات کلی</p>
                         </li>
                         <hr/>
-                        <li>
+                    <li onClick={() => navigate ("/blogs") }>
                             <p>تفاوت مزاج و طبع</p>
                         </li>
                         <hr/>
-                        <li>
+                        <li onClick={() => navigate ("/blogs") }>
                             <p>چگونگی تغییر مزاج</p>
                         </li>
 

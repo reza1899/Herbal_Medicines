@@ -12,6 +12,7 @@ import {
     Footer,
     TemperamentSurvey,
     Navbar,
+    Blogs,
 } from "./service/components";
 
 const App = () => {
@@ -46,6 +47,7 @@ const App = () => {
                         <Route path="/login" element={<Login />} />
                         <Route path="/register" element={<Register />} />
                         <Route path="TS" element={<TemperamentSurvey />} />
+                        <Route path="/blogs" element={<Blogs />} />
                     </Routes>
                 </div>
                 <div className="footer">
