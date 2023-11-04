@@ -62,6 +62,8 @@ const Search = () => {
                             <div>
                                 <div onClick={() => navigate(`/view/${plant.name}`) } key={plant.id} className="search-result-item">
                                     <p className="m-0">{plant.name}</p>
+                                    {/*<img src="../../../images/plants/hel.png" alt="" />*/}
+                                    <img src={plant.avatarUrl} alt=""/>
                                 </div>
                                 <hr/>
                             </div>
