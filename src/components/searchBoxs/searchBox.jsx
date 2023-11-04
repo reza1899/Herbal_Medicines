@@ -60,10 +60,9 @@ const Search = () => {
                     {filteredPlants.length > 0 ? (
                         filteredPlants.map((plant) => (
                             <div>
-                                <div onClick={() => navigate(`/view/${plant.name}`) } key={plant.id} className="search-result-item">
-                                    <p className="m-0">{plant.name}</p>
-                                    {/*<img src="../../../images/plants/hel.png" alt="" />*/}
-                                    <img src={plant.avatarUrl} alt=""/>
+                                <div onClick={() => navigate(`/view/${plant.name}`) } key={plant.id} className="search-result-item d-flex justify-content-between">
+                                    <p className="m-0 fs-2">{plant.name}</p>
+                                    <img className="plant-avatar" src={plant.avatarUrl} alt=""/>
                                 </div>
                                 <hr/>
                             </div>
