@@ -13,6 +13,7 @@ import {
     TemperamentSurvey,
     Navbar,
     Blogs,
+    Viewplants,
 } from "./service/components";
 
 const App = () => {
@@ -46,8 +47,9 @@ const App = () => {
                         <Route path="/blog" element={<Blog />} />
                         <Route path="/login" element={<Login />} />
                         <Route path="/register" element={<Register />} />
-                        <Route path="TS" element={<TemperamentSurvey />} />
+                        <Route path="/TS" element={<TemperamentSurvey />} />
                         <Route path="/blogs" element={<Blogs />} />
+                        <Route path="/view/:name" element={<Viewplants />} />
                     </Routes>
                 </div>
                 <div className="footer">

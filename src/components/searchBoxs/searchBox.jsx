@@ -1,9 +1,11 @@
 import {useContext, useRef, useState} from "react";
 import {plants} from "../../service/data";
+import {useNavigate } from "react-router-dom";
 import "./search.css";
 import contextApi from "./../../context/contextApi";
 
 const Search = () => {
+    const navigate = useNavigate();
     const [searchResult, setSearchResult] = useState(false);
     const inputRef = useRef(null);
 
@@ -58,7 +60,7 @@ const Search = () => {
                     {filteredPlants.length > 0 ? (
                         filteredPlants.map((plant) => (
                             <div>
-                                <div key={plant.id} className="search-result-item">
+                                <div onClick={() => navigate(`/view/${plant.name}`) } key={plant.id} className="search-result-item">
                                     <p className="m-0">{plant.name}</p>
                                 </div>
                                 <hr/>
