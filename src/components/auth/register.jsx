@@ -68,7 +68,7 @@ const Register = () => {
                 </p>
             </div>
             <div className="auth_right_sec">
-                <img className="auth_img" src="https://img.freepik.com/free-photo/flat-lay-medicinal-spices-herbs_23-2148776461.jpg?w=1380&t=st=1693006414~exp=1693007014~hmac=8825f8f79ef1f2a96e55bf2efeeef6dbe0f26d53e2b4606a3dbbf282bedb5116" alt="" />
+                <img className="auth_img" src="../../../images/register.jpg" alt="" />
 
             </div>
         </div>

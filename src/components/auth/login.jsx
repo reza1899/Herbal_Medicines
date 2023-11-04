@@ -49,7 +49,7 @@ const Login = () => {
                 </p>
             </div>
             <div className="auth_right_sec">
-                <img className="auth_img" src="https://img.freepik.com/free-photo/herbal-spices-wooden-bowl-spoon-sack_23-2147975510.jpg?w=740&t=st=1693054713~exp=1693055313~hmac=f33955bff646218b05544ccb7b6d61aad1444c9082767da645f627164977e6ed" alt=""  />
+                <img className="auth_img" src="../../../images/login.jpg" alt=""  />
             </div>
         </div>
     );
