@@ -14,6 +14,7 @@ import {
     Navbar,
     Blogs,
     Viewplants,
+    NotFound,
 } from "./service/components";
 
 const App = () => {
@@ -26,6 +27,7 @@ const App = () => {
     
     // Determine if Navbar and Footer should be shown
     const showNavbarAndFooter = !["/login", "/register"].includes(location.pathname);
+    const isNotFoundPage = location.pathname === "/not-found";
 
     return (
         <contextApi.Provider value={{
@@ -37,7 +39,7 @@ const App = () => {
             setIsLogin
         }}>
             <div className="App">
-                {showNavbarAndFooter && <Navbar />}
+                {showNavbarAndFooter && isNotFoundPage && <Navbar />}
                 {/*{showNavbarAndFooter && <Navbar />}*/}
                 {location.pathname === "/" && <Header />}
                 <div className="app-wrapper">
@@ -50,10 +52,11 @@ const App = () => {
                         <Route path="/TS" element={<TemperamentSurvey />} />
                         <Route path="/blogs" element={<Blogs />} />
                         <Route path="/view/:name" element={<Viewplants />} />
+                        <Route path="*" element={<NotFound />} />
                     </Routes>
                 </div>
                 <div className="footer">
-                    {showNavbarAndFooter && <Footer />}
+                    {showNavbarAndFooter && isNotFoundPage && <Footer />}
                 </div>
             </div>
         </contextApi.Provider>

@@ -1,7 +1,7 @@
 import "./main.css"
-
 const Main = () => {
-    return (<>
+    return (
+        <>
         <div>
             {/*  our-story section  */}
             <div className="our_story">
