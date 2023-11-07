@@ -1,0 +1,46 @@
+.main-view{
+    background-color: white;
+    height: 100vh;
+    padding: 100px;
+}
+.img-section {
+    width: 50%;
+    text-align: center;
+}
+.plant-img{
+    width: 70%;
+    height: 70%;
+    margin-top: 50px;
+}
+.info-right-section{
+    width: 50%;
+    padding: 40px;
+}
+.plant-latin {
+    font-style: italic;
+    color: #0076d8;
+
+}
+.info-right-section hr{
+    border: 1px solid gray;
+}
+.introduction-titles {
+    display: flex;
+    margin-top: 50px;
+}
+.introduction-titles p{
+    cursor: pointer;
+    transition:   0.3s;
+}
+.introduction-titles p:hover{
+    background-color: #0076d8;
+    color: white;
+    border-radius: 10px;
+    padding:5px 10px 5px 10px;
+    transition:   0.3s;
+}
+
+.introduction hr{
+    border: 1px solid gray;
+    margin: 0px;
+}
