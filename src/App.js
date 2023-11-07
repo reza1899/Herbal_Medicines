@@ -21,44 +21,45 @@ const App = () => {
     const [loading, setLoading] = useState(false);
     const [filteredPlants, setFilteredPlants] = useState([]);
     const [isLogin, setIsLogin] = useState();
-    
+
     // Get the current location
     const location = useLocation();
-    
-    // Determine if Navbar and Footer should be shown
-    const showNavbarAndFooter = !["/login", "/register"].includes(location.pathname);
-    const isNotFoundPage = location.pathname === "/not-found";
 
+    // Determine if Navbar and Footer should be shown
+    const showNavbarAndFooter = ["/", "/contact" , "/blog" , "/ts" , "/blogs" , "/view"].includes(location.pathname);
     return (
-        <contextApi.Provider value={{
-            loading,
-            setLoading,
-            filteredPlants,
-            setFilteredPlants,
-            isLogin,
-            setIsLogin
-        }}>
-            <div className="App">
-                {showNavbarAndFooter && isNotFoundPage && <Navbar />}
-                {/*{showNavbarAndFooter && <Navbar />}*/}
-                {location.pathname === "/" && <Header />}
-                <div className="app-wrapper">
-                    <Routes>
-                        <Route path="/" element={<Main/>} />
-                        <Route path="/contact" element={<ContactUs />} />
-                        <Route path="/blog" element={<Blog />} />
-                        <Route path="/login" element={<Login />} />
-                        <Route path="/register" element={<Register />} />
-                        <Route path="/TS" element={<TemperamentSurvey />} />
-                        <Route path="/blogs" element={<Blogs />} />
-                        <Route path="/view/:name" element={<Viewplants />} />
-                        <Route path="*" element={<NotFound />} />
-                    </Routes>
+        <contextApi.Provider
+            value={{
+                loading,
+                setLoading,
+                filteredPlants,
+                setFilteredPlants,
+                isLogin,
+                setIsLogin,
+            }}
+        >
+            <>
+                <div className="App">
+                    {showNavbarAndFooter && <Navbar />}
+                    {location.pathname === "/" && <Header />}
+                    <div className="app-wrapper">
+                        <Routes>
+                            <Route path="/" element={<Main />} />
+                            <Route path="/contact" element={<ContactUs />} />
+                            <Route path="/blog" element={<Blog />} />
+                            <Route path="/login" element={<Login />} />
+                            <Route path="/register" element={<Register />} />
+                            <Route path="/TS" element={<TemperamentSurvey />} />
+                            <Route path="/blogs" element={<Blogs />} />
+                            <Route path="/view/:name" element={<Viewplants />} />
+                            <Route path="*" element={<NotFound />} />
+                        </Routes>
+                    </div>
+                    <div className="footer">
+                        {showNavbarAndFooter &&  <Footer />}
+                    </div>
                 </div>
-                <div className="footer">
-                    {showNavbarAndFooter && isNotFoundPage && <Footer />}
-                </div>
-            </div>
+            </>
         </contextApi.Provider>
     );
 };
