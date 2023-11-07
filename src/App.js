@@ -26,7 +26,7 @@ const App = () => {
     const location = useLocation();
 
     // Determine if Navbar and Footer should be shown
-    const showNavbarAndFooter = ["/", "/contact" , "/blog" , "/ts" , "/blogs" , "/view"].includes(location.pathname);
+    const showNavbarAndFooter = ["/", "/contact" , "/blog" , "/ts" , "/blogs" ].includes(location.pathname) || location.pathname.startsWith("/view");
     return (
         <contextApi.Provider
             value={{
