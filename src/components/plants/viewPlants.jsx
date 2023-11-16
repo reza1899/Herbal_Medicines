@@ -3,6 +3,41 @@ import {plants} from "../../service/data";
 import "./viewPlants.css"
 
 const ViewPlants = () => {
+  //   const [options, setOptions] = useState(null);
+  //   useEffect(() => {
+  //       getOptions()
+  //   }, [])
+  //
+  //   async function getOptions() {
+  //
+  //       let {data: options, error} = await supabase
+  //           .from('options')
+  //           .select(`
+  //                   option_body,
+  //                   questions (
+  //                   *
+  //   )
+  // `)
+  //
+  //       if (error) {
+  //           throw error;
+  //       }
+  //       if (options) {
+  //           setOptions(options);
+  //           console.log(options);
+  //       }
+  //   }
+
+
+    // async function getPlants() {
+    //    const {data, error} = await supabase.from('plants').select('*');
+    //    if (error) {
+    //        throw error;
+    //    }
+    //    if (data) {
+    //        console.log(data);
+    //    }
+    // }
     const {name} = useParams();
 
     const plant =
@@ -28,7 +63,7 @@ const ViewPlants = () => {
                         <p className="fs-2 mx-4">
                             /
                         </p>
-                        <h1 className="plant-latin" >{plant.latinName}</h1>
+                        <h1 className="plant-latin">{plant.latinName}</h1>
                     </div>
                     <hr/>
                     <div className="properties p-3">
