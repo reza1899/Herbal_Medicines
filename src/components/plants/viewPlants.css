@@ -1,46 +1,142 @@
-.main-view{
+.main-view {
     background-color: white;
-    height: 100vh;
     padding: 100px;
 }
+
+.img-info {
+    display: flex;
+}
+
 .img-section {
     width: 50%;
     text-align: center;
 }
-.plant-img{
+
+.plant-img {
     width: 70%;
     height: 70%;
     margin-top: 50px;
 }
-.info-right-section{
+
+.info-right-section {
     width: 50%;
     padding: 40px;
 }
+
 .plant-latin {
     font-style: italic;
-    color: #0076d8;
+    color: #5C9137;
 
 }
-.info-right-section hr{
+
+.info-right-section hr {
     border: 1px solid gray;
 }
+
 .introduction-titles {
     display: flex;
     margin-top: 50px;
-}
-.introduction-titles p{
-    cursor: pointer;
-    transition:   0.3s;
-}
-.introduction-titles p:hover{
-    background-color: #0076d8;
-    color: white;
-    border-radius: 10px;
-    padding:5px 10px 5px 10px;
-    transition:   0.3s;
+    height: 50px;
 }
 
-.introduction hr{
+.introduction-titles button {
+    cursor: pointer;
+    transition: 0.3s;
+    height: 40px;
+}
+
+.introduction-titles button:hover {
+    background-color: #5C9137;
+    color: white;
+    border-radius: 10px;
+    padding: 5px 10px 5px 10px;
+    transition: 0.3s;
+}
+
+.introduction hr {
     border: 1px solid gray;
     margin: 0px;
+}
+
+.uses-section {
+    height: auto;
+    padding: 20px;
+}
+
+.uses-hr {
+    width: 150px;
+    margin: 20px;
+}
+
+.how-to-use-section {
+    height: auto;
+    padding: 20px;
+}
+
+.side-effects-section {
+    height: auto;
+    padding: 20px;
+}
+
+@media screen and (max-width: 992px) {
+    .img-info {
+        display: block;
+    }
+    .img-section {
+        width: 100%;
+    }
+    .info-right-section{
+        width: 100%;
+    }
+}
+@media screen and (max-width: 768px) {
+   .paragraph {
+       font-size: 15px !important;
+   }
+    .h-section{
+        font-size: 20px !important;
+    }
+
+}
+@media screen and (max-width: 576px) {
+    .plant-name{
+        font-size: 20px !important;
+    }
+    .plant-hr{
+        display: none;
+    }
+    .h-Properties{
+        font-size:  15px !important;
+        font-weight: bold;
+    }
+    .info-right-section{
+        padding: 0px;
+    }
+    .uses-section{
+        padding: 0px;
+    }
+    .uses-section h1 {
+        margin-top: 70px;
+    }
+    .paragraph {
+        font-size: 10px !important;
+    }
+    .h-section{
+        font-size: 15px !important;
+    }
+    .introduction-titles{
+        display: block;
+        height: 80px;
+    }
+    .introduction-titles button {
+        display: block;
+        height: 30px;
+        margin: 0px !important;
+        font-size: 15px;
+        padding: 5px 10px 5px 10px;
+        border-radius: 10px;
+        transition: 0.3s;
+
+    }
+
 }
