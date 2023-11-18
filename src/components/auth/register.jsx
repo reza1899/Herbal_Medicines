@@ -115,10 +115,15 @@ const Register = () => {
     }
 
     async function handleGoogleRegister() {
-
-        const { data, error } = await supabase.auth.signInWithOAuth({
-            provider: 'google'
-        })
+        try {
+            const { data, error } = await supabase.auth.signInWithPassword({
+                email: formData.email,
+                password: formData.password,
+            })
+            alert("You are logged in")
+        }catch (error) {
+            alert(error)
+        }
 
     }
 
