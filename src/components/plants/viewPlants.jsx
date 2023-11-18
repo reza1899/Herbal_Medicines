@@ -97,7 +97,7 @@ const ViewPlants = () => {
                         مضرات
                     </button>
                 </div>
-                <hr className="plant-hr"/>
+                <hr className=""/>
                 {/*uses*/}
                 <div className="uses-section" id="uses">
                     <h1 className="h-section  fs-5">

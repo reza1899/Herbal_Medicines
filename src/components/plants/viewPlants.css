@@ -125,14 +125,11 @@
         font-size: 15px !important;
     }
     .introduction-titles{
-        display: block;
-        height: 80px;
     }
     .introduction-titles button {
-        display: block;
         height: 30px;
         margin: 0px !important;
-        font-size: 15px;
+        font-size: 10px;
         padding: 5px 10px 5px 10px;
         border-radius: 10px;
         transition: 0.3s;
