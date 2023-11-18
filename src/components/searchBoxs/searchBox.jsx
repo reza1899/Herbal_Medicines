@@ -46,7 +46,7 @@ const Search = () => {
                     id="searchBox"
                     ref={inputRef}
                     className="search"
-                    placeholder="جستجو کنید"
+                    placeholder="جستجو دارو..."
                     type="text"
                     onChange={handleInputChange}
                     onInput={handleFocus}

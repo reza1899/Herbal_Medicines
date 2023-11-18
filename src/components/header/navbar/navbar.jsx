@@ -32,8 +32,8 @@ const Navbar = () => {
                     </div>
                     <div className="main_header">
                         <img className="logo"
-                             src="https://img.freepik.com/premium-photo/hand-draw-shampoo-bottel-vector-design_862994-17792.jpg?size=626&ext=jpg&ga=GA1.2.1004515625.1688841236&semt=ais"
-                             alt=""/>
+                             src="../../../../images/photo1697445275.png"
+                             alt="logo"/>
                         <div className="left ">
                             <div className="">
                                 <a className="" href="https://www.instagram.com"><i

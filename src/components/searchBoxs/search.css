@@ -48,7 +48,7 @@
 
 /*search result */
 .search-result {
-    overflow: auto;
+    overflow: scroll;
     border-radius: 8px;
     padding: 10px;
     z-index: 100;
