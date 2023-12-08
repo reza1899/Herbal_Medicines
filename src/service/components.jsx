@@ -10,3 +10,4 @@ export {default as TemperamentSurvey} from "../components/TemperamentSurvey/Temp
 export {default as Viewplants} from "../components/plants/viewPlants"
 export {default as NotFound} from "../components/notFound/notFound"
 export {default as Difference} from "../components/blog/Difference _in_temperament"
+export {default as Change_mood} from "../components/blog/change_mood"

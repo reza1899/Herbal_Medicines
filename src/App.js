@@ -15,6 +15,7 @@ import {
     Viewplants,
     NotFound,
     Difference,
+    Change_mood
 } from "./service/components";
 
 const App = () => {
@@ -26,7 +27,7 @@ const App = () => {
     const location = useLocation();
 
     // Determine if Navbar and Footer should be shown
-    const showNavbarAndFooter = ["/", "/contact" , "/blog" , "/ts" , "/difference" ].includes(location.pathname) || location.pathname.startsWith("/view/");
+    const showNavbarAndFooter = ["/", "/contact" , "/blog" , "/ts" , "/difference" , "/change_mood" ].includes(location.pathname) || location.pathname.startsWith("/view/");
     return (
         <contextApi.Provider
             value={{
@@ -52,6 +53,7 @@ const App = () => {
                             <Route path="/TS" element={<TemperamentSurvey />} />
                             <Route path="/view/:name" element={<Viewplants />} />
                             <Route path="/difference" element={<Difference />} />
+                            <Route path="/change_mood" element={<Change_mood />} />
                             <Route path="*" element={<NotFound />} />
                         </Routes>
                     </div>
