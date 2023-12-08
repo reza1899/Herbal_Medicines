@@ -12,9 +12,9 @@ import {
     Footer,
     TemperamentSurvey,
     Navbar,
-    Blogs,
     Viewplants,
     NotFound,
+    Difference,
 } from "./service/components";
 
 const App = () => {
@@ -26,7 +26,7 @@ const App = () => {
     const location = useLocation();
 
     // Determine if Navbar and Footer should be shown
-    const showNavbarAndFooter = ["/", "/contact" , "/blog" , "/ts" , "/blogs" ].includes(location.pathname) || location.pathname.startsWith("/view/");
+    const showNavbarAndFooter = ["/", "/contact" , "/blog" , "/ts" , "/difference" ].includes(location.pathname) || location.pathname.startsWith("/view/");
     return (
         <contextApi.Provider
             value={{
@@ -50,8 +50,8 @@ const App = () => {
                             <Route path="/login" element={<Login />} />
                             <Route path="/register" element={<Register />} />
                             <Route path="/TS" element={<TemperamentSurvey />} />
-                            <Route path="/blogs" element={<Blogs />} />
                             <Route path="/view/:name" element={<Viewplants />} />
+                            <Route path="/difference" element={<Difference />} />
                             <Route path="*" element={<NotFound />} />
                         </Routes>
                     </div>
