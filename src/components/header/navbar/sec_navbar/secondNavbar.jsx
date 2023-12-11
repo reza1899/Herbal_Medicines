@@ -88,7 +88,7 @@ const SecondNavbar = () => {
                             <p>تفاوت مزاج و طبع</p>
                         </li>
                         <hr/>
-                        <li onClick={() => navigate ("/blogs") }>
+                        <li onClick={() => navigate ("/change_mood") }>
                             <p>چگونگی تغییر مزاج</p>
                         </li>
 
