@@ -60,16 +60,8 @@ const SecondNavbar = () => {
                 <div className={`aboutUs_d ${showAboutUs ? 'div-aboutUs-show' : 'div-aboutUs'}`}
                      onMouseOver={() => setShowAboutUs(true)} onMouseLeave={() => setShowAboutUs(false)}>
                     <ul>
-                        <li onClick={() => navigate ("/blogs") }>
+                        <li onClick={() => navigate ("/contact") }>
                             <p>درباره ی ما</p>
-                        </li>
-                        <hr/>
-                        <li onClick={() => navigate ("/blogs") }>
-                            <p>تماس با ما</p>
-                        </li>
-                        <hr/>
-                        <li onClick={() => navigate ("/blogs") }>
-                            <p>سوالات متداول</p>
                         </li>
 
                     </ul>

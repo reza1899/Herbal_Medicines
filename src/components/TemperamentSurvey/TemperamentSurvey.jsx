@@ -40,12 +40,6 @@ const questions = [{
         ],
 
     },
-    // {
-    //     question: '', options: [""],
-    // },
-    // {
-    //     question: '', options: [""],
-    // },
 ];
 
 const TemperamentSurvey = () => {
@@ -198,11 +192,7 @@ const TemperamentSurvey = () => {
         }
     };
 
-    // if (temperament) {
-    //     return (<div>
-    //         <h1>Your Temperament is: {temperament}</h1>
-    //     </div>);
-    // }
+
     const [isReady, setIsReady] = useState(0);
     const [isModalOpen, setIsModalOpen] = useState(false);
     const openModal = () => {

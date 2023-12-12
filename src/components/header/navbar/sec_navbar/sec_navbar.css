@@ -41,6 +41,7 @@ ul.w-100 li:hover{
 }
 
 .div-aboutUs-show {
+
     visibility: visible;
     opacity: 1;
     transition:  opacity 0.3s ease, transform 0.3s ease;
@@ -48,7 +49,7 @@ ul.w-100 li:hover{
 }
 div.aboutUs_d{
     position: absolute;
-    height: 160px;
+    height: 60px;
     width: 200px;
     background-color: #ffffff;
     top: 80%;
@@ -132,4 +133,7 @@ div.blog_d ul li p{
     .main_navbar {
         display: none;
     }
+}
+.contact {
+    height: auto;
 }
