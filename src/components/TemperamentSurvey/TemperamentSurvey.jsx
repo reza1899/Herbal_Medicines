@@ -237,26 +237,29 @@ const TemperamentSurvey = () => {
                 </div>
             )}
             {/*get start*/}
-            {isReady === 1 && (
-                // Section 1: Display the start screen
-                <div className="temperament-quiz-start">
-                    <div className="header-start">
-                        <h1>
-                            آزمون مزاج شناسی
-                        </h1>
-                        <hr className=" border border-success border-3"/>
-                    </div>
-                    <button className="start-button border border-success" onClick={() => setIsReady(2)}>
-                        <p className=" fs-4 m-0">
-                            شروع آزمون
-                        </p>
-                        <i className="start-icon fas fa-arrow-left fs-4"></i>
-                    </button>
-                </div>
-            )}
+            {/*{isReady === 1 && (*/}
+            {/*    // Section 1: Display the start screen*/}
+            {/*    <div className="temperament-quiz-start">*/}
+            {/*        <div className="header-start">*/}
+            {/*            <h1>*/}
+            {/*                آزمون مزاج شناسی*/}
+            {/*            </h1>*/}
+            {/*            <hr className=" border border-success border-3"/>*/}
+            {/*        </div>*/}
+            {/*        <button className="start-button border border-success" onClick={() => setIsReady(2)}>*/}
+            {/*            <p className=" fs-4 m-0">*/}
+            {/*                شروع آزمون*/}
+            {/*            </p>*/}
+            {/*            <i className="start-icon fas fa-arrow-left fs-4"></i>*/}
+            {/*        </button>*/}
+            {/*    </div>*/}
+            {/*)}*/}
+
+
             {/*
                 questions test
             */}
+
             {isReady === 2 && !temperament && (
                 <div className="questions-content">
                     <h1>
