@@ -20,6 +20,7 @@ const Login = () => {
                 email: formData.email,
                 password: formData.password,
             })
+            localStorage.setItem("email", formData.email)
             alert("You are logged in")
             console.log(data, error)
         }catch (error) {
@@ -33,17 +34,12 @@ const Login = () => {
     }
     return (
         <>
-            {/*<div className="position-absolute top-50 start-50 end-50">*/}
-            {/*    <input type="email" placeholder="Email"/>*/}
-            {/*    <input className="my-3" type="password" placeholder="Password"/>*/}
-            {/*    <button className="btn btn-success" onClick={handleSubmit}>submit</button>*/}
-            {/*</div>*/}
             <div className="main-register-form">
                 <div className="form">
-                    <input className="" placeholder="Email" type="email" name="email" onChange={handleChange}/>
-                    <input className="" placeholder="Password" type="password" name="password" onChange={handleChange}/>
+                    <input className="" placeholder="ایمیل" type="email" name="email" onChange={handleChange}/>
+                    <input className="" placeholder="رمز عبور" type="password" name="password" onChange={handleChange}/>
 
-                    <button className="" onClick={handleSubmit}>Login</button>
+                    <button className="" onClick={handleSubmit}>ورود</button>
                     <p className="text-muted text-center mt-3 ms-5">
                         Or register with
                     </p>

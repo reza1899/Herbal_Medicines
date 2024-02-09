@@ -58,12 +58,12 @@ const Register = () => {
         <>
             <div className="main-register-form">
                 <div className="form">
-                    <input className="" placeholder="Username" type="text" name="username" onChange={handleChange} />
-                    <input className="" placeholder="Email" type="email" name="email" onChange={handleChange}/>
-                    <input className="" placeholder="Password" type="password" name="password" onChange={handleChange}/>
-                    <input className="" placeholder="Confirm password" type="password" name="confirmpassword" onChange={handleChange}/>
+                    <input className="" placeholder="نام کاربری" type="text" name="username" onChange={handleChange} />
+                    <input className="" placeholder="ایمیل" type="email" name="email" onChange={handleChange}/>
+                    <input className="" placeholder="رمز عبور" type="password" name="password" onChange={handleChange}/>
+                    <input className="" placeholder="تکرار رمز عبور " type="password" name="confirmPassword" onChange={handleChange} />
 
-                    <button className="" onClick={handleSubmit}>Register</button>
+                    <button className="" onClick={handleSubmit}>ثبت نام</button>
                     <p className="text-muted text-center mt-3 ms-5">
                         Or register with
                     </p>
