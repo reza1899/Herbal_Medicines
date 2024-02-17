@@ -1,9 +1,9 @@
 import {useContext, useRef, useState} from "react";
 import {plants} from "../../service/data";
-import {useNavigate } from "react-router-dom";
+import {useNavigate} from "react-router-dom";
 import "./search.css";
 import contextApi from "./../../context/contextApi";
-
+import SinglePlant from "./../plants/plant/singlePlant"
 const Search = () => {
     const navigate = useNavigate();
     const [searchResult, setSearchResult] = useState(false);
@@ -40,6 +40,7 @@ const Search = () => {
 
     return (
         <>
+            <singlePlant/>
             <div className="search-box text-center">
                 <i className="fas fa-search search-icon text-muted"></i>
                 <input
@@ -59,6 +60,9 @@ const Search = () => {
                 <div className="text-center">
                     {filteredPlants.length > 0 ? (
                         filteredPlants.map((plant) => (
+                            // <div onClick={() => navigate(`/view/${plant.name}`) } key={plant.id} className="search-result-item d-flex justify-content-between">
+                            //     <SinglePlant Plant = {plant}/>
+                            // </div>
                             <div>
                                 <div onClick={() => navigate(`/view/${plant.name}`) } key={plant.id} className="search-result-item d-flex justify-content-between">
                                     <p className="m-0 fs-2">{plant.name}</p>
