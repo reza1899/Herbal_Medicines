@@ -1,4 +1,4 @@
-import { Routes, Route, useLocation } from "react-router-dom";
+import { Routes, Route, useLocation, Navigate } from "react-router-dom";
 import contextApi from "./context/contextApi";
 import { useState } from "react";
 import "./../src/components/footer/footer.css";
@@ -15,7 +15,7 @@ import {
     Viewplants,
     NotFound,
     Difference,
-    Change_mood
+    Change_mood,
 } from "./service/components";
 
 const App = () => {
@@ -26,8 +26,9 @@ const App = () => {
     // Get the current location
     const location = useLocation();
 
-    // Determine if Navbar and Footer should be shown
-    const showNavbarAndFooter = ["/", "/contact" , "/blog" , "/ts" , "/difference" , "/change_mood" ].includes(location.pathname) || location.pathname.startsWith("/view/");
+    // Determine if the header and footer should be shown
+    const showHeaderAndFooter = location.pathname !== "/404";
+
     return (
         <contextApi.Provider
             value={{
@@ -41,8 +42,8 @@ const App = () => {
         >
             <>
                 <div className="App">
-                    {showNavbarAndFooter && <Navbar />}
-                    {location.pathname === "/" && <Header />}
+                    {showHeaderAndFooter && <Navbar />}
+                    {location.pathname === "/" && showHeaderAndFooter && <Header />}
                     <div className="app-wrapper">
                         <Routes>
                             <Route path="/" element={<Main />} />
@@ -54,12 +55,15 @@ const App = () => {
                             <Route path="/view/:name" element={<Viewplants />} />
                             <Route path="/difference" element={<Difference />} />
                             <Route path="/change_mood" element={<Change_mood />} />
-                            <Route path="*" element={<NotFound />} />
+                            <Route path="/404" element={<NotFound />} />
+                            <Route path="*" element={<Navigate to="/404" replace />} />
                         </Routes>
                     </div>
-                    <div className="footer">
-                        {showNavbarAndFooter &&  <Footer />}
-                    </div>
+                    {showHeaderAndFooter && (
+                        <div className="footer">
+                            <Footer />
+                        </div>
+                    )}
                 </div>
             </>
         </contextApi.Provider>

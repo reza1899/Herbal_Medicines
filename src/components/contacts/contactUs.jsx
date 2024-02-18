@@ -1,5 +1,9 @@
 import "./contactUs.css"
+import {useLocation} from "react-router-dom";
+
 const ContactUs = () =>{
+    const location = useLocation();
+    console.log (location.pathname)
     return(
         <>
            <div className="main-about-us">
