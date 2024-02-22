@@ -1,8 +1,10 @@
 import { useState } from "react";
 import supabase from "../../config/supabaseClient";
 import "./auth.css";
+import Spinner from "../Spinner";
 import { Link , useNavigate} from "react-router-dom";
 const Register = () => {
+    const [isLoading, setIsLoading] = useState(false);
     const navigate = useNavigate();
     const [formData, setFormData] = useState({
         username: "",
@@ -19,21 +21,42 @@ const Register = () => {
     }
 
     async function handleSubmit() {
+        // insert user to database operation
+
+        try {
+            setIsLoading(true)
+            if (formData.password !== formData.confirmPassword) {
+                alert("Passwords do not match");
+                setIsLoading(false)
+                return;
+            }
+            const { data, error } = await supabase
+                .from('Users')
+                .insert([
+                    { username: formData.username, email: formData.email , password: formData.password },
+                ])
+                .select()
+            console.log(data ,error)
+        }catch (error) {
+            setIsLoading(false)
+            console.log(error);
+        }
+
+        // sign up operation
         try {
             const { data, error } = await supabase.auth.signUp({
                 email: formData.email,
                 password: formData.password,
-                data: {
-                    username: formData.username,
-                    confirmPassword: formData.confirmPassword,
-                }
+               options: {
+                   data: {
+                       username: formData.username,
+                       confirmPassword: formData.confirmPassword,
+                   }
+               }
             });
-            if (formData.password !== formData.confirmPassword) {
-                alert("Passwords do not match");
-                return;
-            }
+            setIsLoading(false)
             alert("Check your email to verify your email");
-            navigate("/");
+            navigate("/login");
             console.log(data, error);
         } catch (error) {
             console.log(error);
@@ -63,7 +86,9 @@ const Register = () => {
                     <input className="" placeholder="رمز عبور" type="password" name="password" onChange={handleChange}/>
                     <input className="" placeholder="تکرار رمز عبور " type="password" name="confirmPassword" onChange={handleChange} />
 
-                    <button className="" onClick={handleSubmit}>ثبت نام</button>
+                    <button className="" onClick={handleSubmit}>
+                        {isLoading ? <Spinner/> : "ثبت نام"}
+                    </button>
                     <p className="text-muted text-center mt-3 ms-5">
                         Or register with
                     </p>
