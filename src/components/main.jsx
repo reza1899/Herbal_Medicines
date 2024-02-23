@@ -1,5 +1,4 @@
 import "./main.css"
-
 const Main = () => {
 
     return (

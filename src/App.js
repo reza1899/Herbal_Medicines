@@ -30,8 +30,7 @@ const App = () => {
     const showHeaderAndFooter = location.pathname !== "/404";
 
     return (
-        <contextApi.Provider
-            value={{
+        <contextApi.Provider value = {{
                 loading,
                 setLoading,
                 filteredPlants,

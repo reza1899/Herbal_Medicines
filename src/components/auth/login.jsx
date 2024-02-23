@@ -1,11 +1,31 @@
-import { useState, useContext } from "react";
+import { useState, useEffect } from "react";
 import supabase from "../../config/supabaseClient";
 import { Link } from "react-router-dom";
-import contextApi from "../../context/contextApi";
-
 const Login = () => {
+    const [isLogin ,setIsLogin] =useState(false)
+    const [users, setUsers] = useState(null);
+    useEffect(() => {
+        const fetchData = async () => {
+            try {
+                const { data, error } = await supabase
+                    .from('Users')
+                    .select();
 
-    const { isLogin, setIsLogin } = useContext(contextApi);
+                if (data) {
+                    setUsers(data);
+                }
+
+                if (error) {
+                    console.log("Error fetching users:", error.message);
+                }
+            } catch (error) {
+                console.error("Error fetching users:", error.message);
+            }
+        };
+
+        fetchData();
+    }, []);
+
     const [formData, setFormData] = useState({
         email: "",
         password: "",
@@ -20,27 +40,38 @@ const Login = () => {
 
     async function handleSubmit() {
         try {
-            let { data: Users, error } = await supabase
-                .from('Users')
-                .select('*')
-            console.log(Users)
-        }catch (error) {
-            alert(error);
-        }
-        try {
+            // Check if the entered email is already registered
+            const userEmails = users && users.map(user => user.email);
+            if (userEmails && userEmails.includes(formData.email)) {
+                // Email is registered, now check the password
+                const user = users.find(user => user.email === formData.email);
+                if (user.password !== formData.password) {
+                    alert("Incorrect password.");
+                    return;
+                }else {
+                    localStorage.setItem("username", user.username);
+                    setIsLogin(prevIsLogin => {
+                        localStorage.setItem("isLogin", !prevIsLogin ? "true" : "false");
+                        return !prevIsLogin;
+                    });
+                }
+            } else {
+                alert("This email is not registered.");
+                return;
+            }
 
-            // Supabase Authentication code
+            // Proceed with authentication
             const { data, error } = await supabase.auth.signInWithPassword({
                 email: formData.email,
                 password: formData.password,
             });
-            localStorage.setItem("email", formData.email);
-            setIsLogin(true);
-            console.log(isLogin);
+
+
+
             alert("You are logged in");
             console.log(data, error);
         } catch (error) {
-            alert(error);
+            alert(error.message);
         }
     }
 
@@ -80,6 +111,16 @@ const Login = () => {
                         >
                             Google <i className="fab fa-google mt-1"></i>
                         </button>
+                        {/*{users && (*/}
+                        {/*    <div>*/}
+                        {/*        <h2>Users</h2>*/}
+                        {/*        <ul>*/}
+                        {/*            {users.map((user, index) => (*/}
+                        {/*                <li key={index}>{user.email}</li>*/}
+                        {/*            ))}*/}
+                        {/*        </ul>*/}
+                        {/*    </div>*/}
+                        {/*)}*/}
                     </div>
                     <p className="text-center mt-4">
                         Already have an account? <Link to="/register">Register</Link>

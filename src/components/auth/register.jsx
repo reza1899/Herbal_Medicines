@@ -30,12 +30,14 @@ const Register = () => {
                 setIsLoading(false)
                 return;
             }
+
             const { data, error } = await supabase
                 .from('Users')
                 .insert([
-                    { username: formData.username, email: formData.email , password: formData.password },
+                    { email: formData.email, password: formData.password, username: formData.username },
                 ])
                 .select()
+
             console.log(data ,error)
         }catch (error) {
             setIsLoading(false)

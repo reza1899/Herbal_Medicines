@@ -3,7 +3,7 @@ import {plants} from "../../service/data";
 import {useNavigate} from "react-router-dom";
 import "./search.css";
 import contextApi from "./../../context/contextApi";
-import SinglePlant from "./../plants/plant/singlePlant"
+// import SinglePlant from "./../plants/plant/singlePlant"
 const Search = () => {
     const navigate = useNavigate();
     const [searchResult, setSearchResult] = useState(false);
@@ -40,7 +40,7 @@ const Search = () => {
 
     return (
         <>
-            <singlePlant/>
+            {/*<singlePlant/>*/}
             <div className="search-box text-center">
                 <i className="fas fa-search search-icon text-muted"></i>
                 <input
