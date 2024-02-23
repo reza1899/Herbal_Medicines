@@ -1,7 +1,9 @@
 import { useState, useEffect } from "react";
+import {useNavigate} from "react-router-dom";
 import supabase from "../../config/supabaseClient";
 import { Link } from "react-router-dom";
 const Login = () => {
+    const navigate = useNavigate()
     const [isLogin ,setIsLogin] =useState(false)
     const [users, setUsers] = useState(null);
     useEffect(() => {
@@ -70,6 +72,7 @@ const Login = () => {
 
             alert("You are logged in");
             console.log(data, error);
+            navigate("/")
         } catch (error) {
             alert(error.message);
         }
