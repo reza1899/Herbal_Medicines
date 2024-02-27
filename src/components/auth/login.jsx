@@ -1,15 +1,16 @@
-import { useState, useEffect } from "react";
+import {useState, useEffect} from "react";
 import {useNavigate} from "react-router-dom";
 import supabase from "../../config/supabaseClient";
-import { Link } from "react-router-dom";
+import {Link} from "react-router-dom";
+
 const Login = () => {
-    const navigate = useNavigate()
-    const [isLogin ,setIsLogin] =useState(false)
+    const navigate = useNavigate() 
+    const [isLogin, setIsLogin] = useState(false)
     const [users, setUsers] = useState(null);
     useEffect(() => {
         const fetchData = async () => {
             try {
-                const { data, error } = await supabase
+                const {data, error} = await supabase
                     .from('Users')
                     .select();
 
@@ -50,7 +51,7 @@ const Login = () => {
                 if (user.password !== formData.password) {
                     alert("Incorrect password.");
                     return;
-                }else {
+                } else {
                     localStorage.setItem("username", user.username);
                     setIsLogin(prevIsLogin => {
                         localStorage.setItem("isLogin", !prevIsLogin ? "true" : "false");
@@ -63,13 +64,10 @@ const Login = () => {
             }
 
             // Proceed with authentication
-            const { data, error } = await supabase.auth.signInWithPassword({
+            const {data, error} = await supabase.auth.signInWithPassword({
                 email: formData.email,
                 password: formData.password,
             });
-
-
-
             alert("You are logged in");
             console.log(data, error);
             navigate("/")
