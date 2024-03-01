@@ -81,7 +81,7 @@ const Blog = () => {
                             تری از شفا دهنده های قوی طبیعت ارائه می دهد.
                         </p>
                     </div>
-                    <div className='blog text-center p-3'> 
+                    <div className='blog text-center p-3'>
                         <h3>
                             "راهنمای گیاه‌پزشک: نکاتی برای استفاده و تهیه داروهای گیاهی"
                         </h3>
