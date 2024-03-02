@@ -129,8 +129,7 @@ const SecondNavbar = () => {
                 <div className={`logout_d ${showUserName ? "div-logout-show" : "div-logout"}`}
                      onMouseOver={() => setShowUserName(true)} onMouseLeave={() => setShowUserName(false)}>
                     <ul>
-
-                        <li onClick={handleLogout}>
+                        <li className="p-2" onClick={handleLogout}>
                             <div className="w-100 d-flex align-items-center justify-content-between">
                                 <p className="m-0">خروج</p>
                                 <i className="fas fa-sign-out-alt ms-2 fs-4 text-muted"></i>
