@@ -34,7 +34,7 @@ const SecondNavbar = () => {
     return (
         <>
             <div className="main_navbar">
-                <ul className="d-flex justify-content-around w-100">
+                <ul className="d-flex justify-content-around w-100 mt-3">
                     <li onClick={() => navigate("/")}>
                         <p className="m-0">
                             <i className="fa fa-home ms-1"></i> خانه
