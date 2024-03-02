@@ -83,7 +83,54 @@ hr{
     margin: 0px 20px 0px 20px;
     color: #bbbbbb;
 }
+/*logout dropdown section*/
 
+div.logout_d{
+    position: absolute;
+    height: 35px;
+    width: 200px;
+    background-color: #ffffff;
+    top: 80%;
+    right: 84%;
+    border-radius: 5px;
+}
+.div-logout {
+    visibility: hidden;
+    opacity: 0;
+    transform: translatex(-20px); /* Start offscreen above */
+    transition: opacity 0.3s ease, transform 0.3s ease; /* Transition for opacity and transform */
+}
+
+.div-logout-show {
+    visibility: visible;
+    opacity: 1;
+    transition:  opacity 0.3s ease, transform 0.3s ease;
+    transform: translateY(0); /* Move to the normal position */
+}
+div .logout_d ul li {
+    height: 30px;
+}
+div.logout_d ul li :hover{
+    transition: 0.3s;
+    background-color: #ff596a;
+    border-radius: 10px;
+    color: white;
+}
+div.logout_d ul li :hover p {
+    color: white;
+}
+div.logout_d ul li :hover i {
+    color: white !important ;
+}
+div.logout_d ul li p{
+    padding: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+    margin:  15px 20px 10px 20px;
+    font-size:  16px;
+    text-align: right;
+    color: #bbbbbb;
+}
 
 /*blog dropdown section */
 
