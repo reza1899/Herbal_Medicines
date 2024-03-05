@@ -4,7 +4,7 @@ import supabase from "../../config/supabaseClient";
 import {Link} from "react-router-dom";
 
 const Login = () => {
-    const navigate = useNavigate()   
+    const navigate = useNavigate()    
     const [isLogin, setIsLogin] = useState(false)
     const [users, setUsers] = useState(null);
     useEffect(() => {
